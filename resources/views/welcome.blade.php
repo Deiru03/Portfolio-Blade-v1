@@ -13,13 +13,9 @@
 
         <!-- Styles / Scripts -->
         @if (file_exists(public_path('build/manifest.json')) || file_exists(public_path('hot')))
-            @vite([
-                'resources/css/app.css', 
-                'resources/js/app.js', 
-                'resources/js/welcome.js', 
-                'resources/css/welcome.css'
-                
-                ])
+            @vite(['resources/css/app.css', 'resources/js/app.js', 
+                                'resources/css/welcome.css', 'resources/js/welcome.js'
+                                ])
         @else
             <style>
                 /* Your existing CSS */
@@ -364,10 +360,6 @@
                         </div>
                     </div>
 
-
-                    <script>
-                        
-                    </script>
                 </div>
             </section>
             
