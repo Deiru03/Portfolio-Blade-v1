@@ -18,6 +18,13 @@
                                 ])
         @else
             <style>
+                html {
+                    scroll-behavior: smooth;
+                    scroll-padding-top: 80px; /* Adjust based on your header height */
+                    }
+                .modal-top {
+                    z-index: 999;
+                }
                 /* Your existing CSS */
             </style>
         @endif
@@ -37,6 +44,24 @@
                     <a href="#skills" class="dark:text-[#EDEDEC] text-[#1b1b18] hover:text-[#f53003] dark:hover:text-[#FF4433] transition-colors">Skills</a>
                     <a href="#projects" class="dark:text-[#EDEDEC] text-[#1b1b18] hover:text-[#f53003] dark:hover:text-[#FF4433] transition-colors">Projects</a>
                     <a href="#contact" class="dark:text-[#EDEDEC] text-[#1b1b18] hover:text-[#f53003] dark:hover:text-[#FF4433] transition-colors">Contact</a>
+                    
+                    <!-- E-Portfolio Dropdown -->
+                    <div class="relative group" style="z-index: 100;">
+                        <button class="flex items-center dark:text-[#EDEDEC] text-[#1b1b18] hover:text-[#f53003] dark:hover:text-[#FF4433] transition-colors">
+                            E-Portfolio
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1 transform group-hover:rotate-180 transition-transform duration-200" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                            </svg>
+                        </button>
+                        <div class="absolute right-0 mt-2 w-48 bg-white dark:bg-[#161615] rounded-md shadow-lg py-1 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50 transform origin-top scale-95 group-hover:scale-100">
+                            <a href="#table-of-contents" class="block px-4 py-2 dark:text-[#EDEDEC] text-[#1b1b18] hover:bg-[#fff2f2] dark:hover:bg-[#1D0002] hover:text-[#f53003] dark:hover:text-[#FF4433]">Table of Contents</a>
+                            <a href="#chapter-1" class="block px-4 py-2 dark:text-[#EDEDEC] text-[#1b1b18] hover:bg-[#fff2f2] dark:hover:bg-[#1D0002] hover:text-[#f53003] dark:hover:text-[#FF4433]">Chapter 1</a>
+                            <a href="#chapter-2" class="block px-4 py-2 dark:text-[#EDEDEC] text-[#1b1b18] hover:bg-[#fff2f2] dark:hover:bg-[#1D0002] hover:text-[#f53003] dark:hover:text-[#FF4433]">Chapter 2</a>
+                            <a href="#chapter-3" class="block px-4 py-2 dark:text-[#EDEDEC] text-[#1b1b18] hover:bg-[#fff2f2] dark:hover:bg-[#1D0002] hover:text-[#f53003] dark:hover:text-[#FF4433]">Chapter 3</a>
+                            <a href="#chapter-4" class="block px-4 py-2 dark:text-[#EDEDEC] text-[#1b1b18] hover:bg-[#fff2f2] dark:hover:bg-[#1D0002] hover:text-[#f53003] dark:hover:text-[#FF4433]">Chapter 4</a>
+                            <a href="#appendices" class="block px-4 py-2 dark:text-[#EDEDEC] text-[#1b1b18] hover:bg-[#fff2f2] dark:hover:bg-[#1D0002] hover:text-[#f53003] dark:hover:text-[#FF4433]">Appendices</a>
+                        </div>
+                    </div>
                 </div>
             </nav>
         </header>
@@ -81,10 +106,160 @@
                                 </svg>
                             </span>
                         </a>
+                        <button id="eportfolio-btn" class="group px-8 py-3 bg-[#fff2f2] dark:bg-[#1D0002] text-[#f53003] dark:text-[#FF4433] border border-[#f53003] dark:border-[#FF4433] rounded-md hover:bg-[#f53003] hover:text-white dark:hover:bg-[#FF4433] dark:hover:text-[#1D0002] transition-all duration-300 transform hover:-translate-y-1 hover:shadow-lg">
+                            <span class="flex items-center">
+                                E-Portfolio
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2 transform group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                                </svg>
+                            </span>
+                        </button>
+                    </div>
+                    
+                    <!-- E-Portfolio Modal -->
+                    <div id="eportfolio-modal" class="modal-top fixed inset-0 z-9 flex items-center justify-center opacity-0 pointer-events-none transition-opacity duration-300 ease-in-out">
+                        <div class="absolute inset-0 bg-opacity-30 backdrop-blur-sm"></div>
+                        <div class="relative bg-white dark:bg-[#161615] rounded-lg shadow-2xl max-w-4xl w-full m-4 p-6 transform scale-95 transition-transform duration-300 ease-in-out">
+                            <div class="flex justify-between items-center mb-6 border-b border-[#e3e3e0] dark:border-[#3E3E3A] pb-4">
+                                <h3 class="text-2xl font-semibold dark:text-[#EDEDEC]">E-Portfolio Documents</h3>
+                                <button id="close-modal" class="p-2 ml-auto text-[#f53003] dark:text-[#FF4433] hover:bg-[#fff2f2] dark:hover:bg-[#1D0002] rounded-full transition-colors">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                                    </svg>
+                                </button>
+                            </div>
+                            
+                            <div class="overflow-y-auto max-h-[70vh]">
+                                <div class="grid md:grid-cols-2 gap-6">
+                                    <!-- TOC Card -->
+                                    <div class="bg-[#FDFDFC] dark:bg-[#0a0a0a] rounded-lg overflow-hidden shadow-[0px_1px_2px_0px_rgba(0,0,0,0.06)] dark:shadow-[inset_0px_0px_0px_1px_#fffaed2d] hover:shadow-md transition-shadow duration-300">
+                                        <div class="h-32 bg-[#fff2f2] dark:bg-[#1D0002] flex items-center justify-center">
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="h-16 w-16 text-[#f53003] dark:text-[#FF4433]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01" />
+                                            </svg>
+                                        </div>
+                                        <div class="p-4">
+                                            <h4 class="text-lg font-medium mb-2 dark:text-[#EDEDEC]">Table of Contents</h4>
+                                            <p class="text-sm dark:text-[#A1A09A] mb-4">Overview of all chapters and sections included in the portfolio</p>
+                                            <a href="#table-of-contents" class="group inline-flex items-center text-[#f53003] dark:text-[#FF4433] hover:underline">
+                                                View
+                                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1 transform group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                                                </svg>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    
+                                    <!-- Chapter 1 Card -->
+                                    <div class="bg-[#FDFDFC] dark:bg-[#0a0a0a] rounded-lg overflow-hidden shadow-[0px_1px_2px_0px_rgba(0,0,0,0.06)] dark:shadow-[inset_0px_0px_0px_1px_#fffaed2d] hover:shadow-md transition-shadow duration-300">
+                                        <div class="h-32 bg-[#fff2f2] dark:bg-[#1D0002] flex items-center justify-center">
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="h-16 w-16 text-[#f53003] dark:text-[#FF4433]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+                                            </svg>
+                                        </div>
+                                        <div class="p-4">
+                                            <h4 class="text-lg font-medium mb-2 dark:text-[#EDEDEC]">Chapter 1: Introduction</h4>
+                                            <p class="text-sm dark:text-[#A1A09A] mb-4">Personal background and career objectives</p>
+                                            <a href="#chapter-1" class="group inline-flex items-center text-[#f53003] dark:text-[#FF4433] hover:underline">
+                                                View
+                                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1 transform group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                                                </svg>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    
+                                    <!-- Chapter 2 Card -->
+                                    <div class="bg-[#FDFDFC] dark:bg-[#0a0a0a] rounded-lg overflow-hidden shadow-[0px_1px_2px_0px_rgba(0,0,0,0.06)] dark:shadow-[inset_0px_0px_0px_1px_#fffaed2d] hover:shadow-md transition-shadow duration-300">
+                                        <div class="h-32 bg-[#fff2f2] dark:bg-[#1D0002] flex items-center justify-center">
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="h-16 w-16 text-[#f53003] dark:text-[#FF4433]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" />
+                                            </svg>
+                                        </div>
+                                        <div class="p-4">
+                                            <h4 class="text-lg font-medium mb-2 dark:text-[#EDEDEC]">Chapter 2: Education</h4>
+                                            <p class="text-sm dark:text-[#A1A09A] mb-4">Academic qualifications and relevant coursework</p>
+                                            <a href="#chapter-2" class="group inline-flex items-center text-[#f53003] dark:text-[#FF4433] hover:underline">
+                                                View
+                                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1 transform group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                                                </svg>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    
+                                    <!-- Chapter 3 Card -->
+                                    <div class="bg-[#FDFDFC] dark:bg-[#0a0a0a] rounded-lg overflow-hidden shadow-[0px_1px_2px_0px_rgba(0,0,0,0.06)] dark:shadow-[inset_0px_0px_0px_1px_#fffaed2d] hover:shadow-md transition-shadow duration-300">
+                                        <div class="h-32 bg-[#fff2f2] dark:bg-[#1D0002] flex items-center justify-center">
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="h-16 w-16 text-[#f53003] dark:text-[#FF4433]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                                            </svg>
+                                        </div>
+                                        <div class="p-4">
+                                            <h4 class="text-lg font-medium mb-2 dark:text-[#EDEDEC]">Chapter 3: Projects</h4>
+                                            <p class="text-sm dark:text-[#A1A09A] mb-4">Detailed documentation of major development projects</p>
+                                            <a href="#chapter-3" class="group inline-flex items-center text-[#f53003] dark:text-[#FF4433] hover:underline">
+                                                View
+                                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1 transform group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                                                </svg>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    
+                                    <!-- Chapter 4 Card -->
+                                    <div class="bg-[#FDFDFC] dark:bg-[#0a0a0a] rounded-lg overflow-hidden shadow-[0px_1px_2px_0px_rgba(0,0,0,0.06)] dark:shadow-[inset_0px_0px_0px_1px_#fffaed2d] hover:shadow-md transition-shadow duration-300">
+                                        <div class="h-32 bg-[#fff2f2] dark:bg-[#1D0002] flex items-center justify-center">
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="h-16 w-16 text-[#f53003] dark:text-[#FF4433]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                                            </svg>
+                                        </div>
+                                        <div class="p-4">
+                                            <h4 class="text-lg font-medium mb-2 dark:text-[#EDEDEC]">Chapter 4: Skills & Certifications</h4>
+                                            <p class="text-sm dark:text-[#A1A09A] mb-4">Technical skills assessment and professional certifications</p>
+                                            <a href="#chapter-4" class="group inline-flex items-center text-[#f53003] dark:text-[#FF4433] hover:underline">
+                                                View
+                                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1 transform group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                                                </svg>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    
+                                    <!-- Appendices Card -->
+                                    <div class="bg-[#FDFDFC] dark:bg-[#0a0a0a] rounded-lg overflow-hidden shadow-[0px_1px_2px_0px_rgba(0,0,0,0.06)] dark:shadow-[inset_0px_0px_0px_1px_#fffaed2d] hover:shadow-md transition-shadow duration-300">
+                                        <div class="h-32 bg-[#fff2f2] dark:bg-[#1D0002] flex items-center justify-center">
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="h-16 w-16 text-[#f53003] dark:text-[#FF4433]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M8 7v8a2 2 0 002 2h6M8 7V5a2 2 0 012-2h4.586a1 1 0 01.707.293l4.414 4.414a1 1 0 01.293.707V15a2 2 0 01-2 2h-2M8 7H6a2 2 0 00-2 2v10a2 2 0 002 2h8a2 2 0 002-2v-2" />
+                                            </svg>
+                                        </div>
+                                        <div class="p-4">
+                                            <h4 class="text-lg font-medium mb-2 dark:text-[#EDEDEC]">Appendices</h4>
+                                            <p class="text-sm dark:text-[#A1A09A] mb-4">Supporting documents, references, and additional resources</p>
+                                            <a href="#appendices" class="group inline-flex items-center text-[#f53003] dark:text-[#FF4433] hover:underline">
+                                                View
+                                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1 transform group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                                                </svg>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="mt-6 text-center">
+                                    <a href="#table-of-contents" class="inline-flex items-center px-6 py-3 bg-[#f53003] dark:bg-[#FF4433] text-white rounded-md hover:bg-[#e52d03] dark:hover:bg-[#e53e2d] transition-colors">
+                                        <span>View Complete E-Portfolio</span>
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 
-                <div class="lg:w-1/2 flex justify-center z-10">
+                <div class="lg:w-1/2 flex justify-center z-0">
                     <div class="relative group">
                         <div class="absolute -inset-0.5 bg-gradient-to-r from-[#ff6347] to-[#f53003] rounded-full opacity-75 blur-md animate-spin-slow group-hover:opacity-100 transition duration-1000"></div>
                         <div class="relative w-72 h-72 bg-[#fff2f2] dark:bg-[#1D0002] rounded-full overflow-hidden shadow-2xl animate-float">
@@ -371,50 +546,78 @@
                 <div class="max-w-7xl mx-auto">
                     <h2 class="text-3xl font-medium mb-8 dark:text-[#EDEDEC]">My Projects</h2>
                     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                        <!-- Project Card 1 -->
-                        <div class="bg-[#FDFDFC] dark:bg-[#0a0a0a] rounded-lg overflow-hidden shadow-[0px_1px_2px_0px_rgba(0,0,0,0.06)] dark:shadow-[inset_0px_0px_0px_1px_#fffaed2d] transition-transform hover:-translate-y-1">
-                            <div class="h-48 bg-[#fff2f2] dark:bg-[#1D0002] flex items-center justify-center">
-                                <!-- Replace with project image -->
-                                <span class="text-[#f53003] dark:text-[#FF4433] text-xl">Project Image</span>
+                        <!-- Project Card 1 - IQA ClearVault -->
+                        <div class="bg-[#FDFDFC] dark:bg-[#0a0a0a] rounded-lg overflow-hidden shadow-[0px_1px_2px_0px_rgba(0,0,0,0.06)] dark:shadow-[inset_0px_0px_0px_1px_#fffaed2d] transition-transform hover:-translate-y-1 hover:shadow-lg">
+                            <div class="h-48 bg-[#fff2f2] dark:bg-[#1D0002] overflow-hidden">
+                                <img src="{{ asset('images/image-project/iqaclearvault.png') }}" alt="Occidental Mindoro State College Project" class="w-full h-full object-cover transition-transform duration-700 hover:scale-105">
                             </div>
                             <div class="p-6">
-                                <h3 class="text-xl font-medium mb-2 dark:text-[#EDEDEC]">Project One</h3>
-                                <p class="mb-4 dark:text-[#A1A09A]">A brief description of the project, its features, and technologies used.</p>
+                                <h3 class="text-xl font-medium mb-2 dark:text-[#EDEDEC]">OMSC Portal</h3>
+                                <p class="mb-4 dark:text-[#A1A09A]">A centralized academic information system for Occidental Mindoro State College. A comprehensive faculty clearance checklist and accreditation management system. This large-scale solution streamlines document verification, tracks compliance, and manages institutional accreditation requirements..</p>
+                                <div class="flex flex-wrap gap-2 mb-4">
+                                    <span class="px-2 py-1 bg-[#fff2f2] dark:bg-[#1D0002] text-[#f53003] dark:text-[#FF4433] rounded-full text-xs font-medium">Laravel</span>
+                                    <span class="px-2 py-1 bg-[#fff2f2] dark:bg-[#1D0002] text-[#f53003] dark:text-[#FF4433] rounded-full text-xs font-medium">MySQL</span>
+                                    <span class="px-2 py-1 bg-[#fff2f2] dark:bg-[#1D0002] text-[#f53003] dark:text-[#FF4433] rounded-full text-xs font-medium">Educational CMS</span>
+                                    <span class="px-2 py-1 bg-[#fff2f2] dark:bg-[#1D0002] text-[#f53003] dark:text-[#FF4433] rounded-full text-xs font-medium">Tailwind</span>
+                                </div>
                                 <div class="flex gap-4">
-                                    <a href="#" class="text-[#f53003] dark:text-[#FF4433] hover:underline">View Demo</a>
-                                    <a href="#" class="text-[#f53003] dark:text-[#FF4433] hover:underline">Source Code</a>
+                                    <a href="https://omsc.edu.ph" class="text-[#f53003] dark:text-[#FF4433] hover:underline flex items-center">
+                                        <span>View Website</span>
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                                        </svg>
+                                    </a>
                                 </div>
                             </div>
                         </div>
                         
-                        <!-- Project Card 2 -->
-                        <div class="bg-[#FDFDFC] dark:bg-[#0a0a0a] rounded-lg overflow-hidden shadow-[0px_1px_2px_0px_rgba(0,0,0,0.06)] dark:shadow-[inset_0px_0px_0px_1px_#fffaed2d] transition-transform hover:-translate-y-1">
-                            <div class="h-48 bg-[#fff2f2] dark:bg-[#1D0002] flex items-center justify-center">
-                                <!-- Replace with project image -->
-                                <span class="text-[#f53003] dark:text-[#FF4433] text-xl">Project Image</span>
+                        <!-- Project Card 2 - BMS Tailoring -->
+                        <div class="bg-[#FDFDFC] dark:bg-[#0a0a0a] rounded-lg overflow-hidden shadow-[0px_1px_2px_0px_rgba(0,0,0,0.06)] dark:shadow-[inset_0px_0px_0px_1px_#fffaed2d] transition-transform hover:-translate-y-1 hover:shadow-lg">
+                            <div class="h-48 bg-[#fff2f2] dark:bg-[#1D0002] overflow-hidden">
+                                <img src="{{ asset('images/image-project/bmstailor.png') }}" alt="BMS Tailoring Project" class="w-full h-full object-cover transition-transform duration-700 hover:scale-105">
                             </div>
                             <div class="p-6">
-                                <h3 class="text-xl font-medium mb-2 dark:text-[#EDEDEC]">Project Two</h3>
-                                <p class="mb-4 dark:text-[#A1A09A]">A brief description of the project, its features, and technologies used.</p>
+                                <h3 class="text-xl font-medium mb-2 dark:text-[#EDEDEC]">BMS Tailoring</h3>
+                                <p class="mb-4 dark:text-[#A1A09A]">A streamlined inventory management system designed for tailors. Features include customer measurement tracking, fabric inventory, order management, and appointment scheduling.</p>
+                                <div class="flex flex-wrap gap-2 mb-4">
+                                    <span class="px-2 py-1 bg-[#fff2f2] dark:bg-[#1D0002] text-[#f53003] dark:text-[#FF4433] rounded-full text-xs font-medium">Laravel</span>
+                                    <span class="px-2 py-1 bg-[#fff2f2] dark:bg-[#1D0002] text-[#f53003] dark:text-[#FF4433] rounded-full text-xs font-medium">MySQL</span>
+                                    <span class="px-2 py-1 bg-[#fff2f2] dark:bg-[#1D0002] text-[#f53003] dark:text-[#FF4433] rounded-full text-xs font-medium">Inventory Management</span>
+                                    <span class="px-2 py-1 bg-[#fff2f2] dark:bg-[#1D0002] text-[#f53003] dark:text-[#FF4433] rounded-full text-xs font-medium">Single User</span>
+                                </div>
                                 <div class="flex gap-4">
-                                    <a href="#" class="text-[#f53003] dark:text-[#FF4433] hover:underline">View Demo</a>
-                                    <a href="#" class="text-[#f53003] dark:text-[#FF4433] hover:underline">Source Code</a>
+                                    <a href="https://bmstailor.omsccast.com" class="text-[#f53003] dark:text-[#FF4433] hover:underline flex items-center">
+                                        <span>View Website</span>
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                                        </svg>
+                                    </a>
                                 </div>
                             </div>
                         </div>
                         
                         <!-- Project Card 3 -->
-                        <div class="bg-[#FDFDFC] dark:bg-[#0a0a0a] rounded-lg overflow-hidden shadow-[0px_1px_2px_0px_rgba(0,0,0,0.06)] dark:shadow-[inset_0px_0px_0px_1px_#fffaed2d] transition-transform hover:-translate-y-1">
-                            <div class="h-48 bg-[#fff2f2] dark:bg-[#1D0002] flex items-center justify-center">
-                                <!-- Replace with project image -->
-                                <span class="text-[#f53003] dark:text-[#FF4433] text-xl">Project Image</span>
+                        <!-- Project Card 3 - OMSC Clinic -->
+                        <div class="bg-[#FDFDFC] dark:bg-[#0a0a0a] rounded-lg overflow-hidden shadow-[0px_1px_2px_0px_rgba(0,0,0,0.06)] dark:shadow-[inset_0px_0px_0px_1px_#fffaed2d] transition-transform hover:-translate-y-1 hover:shadow-lg">
+                            <div class="h-48 bg-[#fff2f2] dark:bg-[#1D0002] overflow-hidden">
+                                <img src="{{ asset('images/image-project/clinic.png') }}" alt="OMSC Clinic Management System" class="w-full h-full object-cover transition-transform duration-700 hover:scale-105">
                             </div>
                             <div class="p-6">
-                                <h3 class="text-xl font-medium mb-2 dark:text-[#EDEDEC]">Project Three</h3>
-                                <p class="mb-4 dark:text-[#A1A09A]">A brief description of the project, its features, and technologies used.</p>
+                                <h3 class="text-xl font-medium mb-2 dark:text-[#EDEDEC]">OMSC Clinic Management</h3>
+                                <p class="mb-4 dark:text-[#A1A09A]">A comprehensive clinic management system for Occidental Mindoro State College. Features include patient appointment scheduling, medication inventory tracking, medical records management, and reporting tools.</p>
+                                <div class="flex flex-wrap gap-2 mb-4">
+                                    <span class="px-2 py-1 bg-[#fff2f2] dark:bg-[#1D0002] text-[#f53003] dark:text-[#FF4433] rounded-full text-xs font-medium">Laravel</span>
+                                    <span class="px-2 py-1 bg-[#fff2f2] dark:bg-[#1D0002] text-[#f53003] dark:text-[#FF4433] rounded-full text-xs font-medium">MySQL</span>
+                                    <span class="px-2 py-1 bg-[#fff2f2] dark:bg-[#1D0002] text-[#f53003] dark:text-[#FF4433] rounded-full text-xs font-medium">Appointment System</span>
+                                    <span class="px-2 py-1 bg-[#fff2f2] dark:bg-[#1D0002] text-[#f53003] dark:text-[#FF4433] rounded-full text-xs font-medium">Inventory Management</span>
+                                </div>
                                 <div class="flex gap-4">
-                                    <a href="#" class="text-[#f53003] dark:text-[#FF4433] hover:underline">View Demo</a>
-                                    <a href="#" class="text-[#f53003] dark:text-[#FF4433] hover:underline">Source Code</a>
+                                    <a href="https://clinic.omsccast.com" class="text-[#f53003] dark:text-[#FF4433] hover:underline flex items-center">
+                                        <span>View Website</span>
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                                        </svg>
+                                    </a>
                                 </div>
                             </div>
                         </div>
@@ -536,6 +739,70 @@
                 
                 stats.forEach(stat => {
                     observer.observe(stat);
+                });
+            });
+
+            // Smooth scrolling for navigation links ------------------------------------------------
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    
+                    const targetId = this.getAttribute('href');
+                    if(targetId === '#') return; // Skip if just '#'
+                    
+                    const targetElement = document.querySelector(targetId);
+                    if(!targetElement) return; // Skip if element doesn't exist
+                    
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80, // Offset for header height
+                        behavior: 'smooth'
+                    });
+                });
+            });
+            // --------------------------------------------------------------------------------------
+             // Modal functionality
+             document.addEventListener('DOMContentLoaded', function() {
+                const modalBtn = document.getElementById('eportfolio-btn');
+                const modal = document.getElementById('eportfolio-modal');
+                const closeBtn = document.getElementById('close-modal');
+                const modalContent = modal.querySelector('.relative');
+                
+                modalBtn.addEventListener('click', function() {
+                    // Show modal
+                    modal.classList.remove('opacity-0', 'pointer-events-none');
+                    modal.classList.add('opacity-100');
+                    // Scale up animation
+                    setTimeout(() => {
+                        modalContent.classList.remove('scale-95');
+                        modalContent.classList.add('scale-100');
+                    }, 10);
+                });
+                
+                function closeModal() {
+                    // Scale down animation
+                    modalContent.classList.remove('scale-100');
+                    modalContent.classList.add('scale-95');
+                    // Hide modal
+                    setTimeout(() => {
+                        modal.classList.remove('opacity-100');
+                        modal.classList.add('opacity-0', 'pointer-events-none');
+                    }, 200);
+                }
+                
+                closeBtn.addEventListener('click', closeModal);
+                
+                // Close when clicking outside
+                modal.addEventListener('click', function(e) {
+                    if (e.target === modal) {
+                        closeModal();
+                    }
+                });
+                
+                // Close on ESC key
+                document.addEventListener('keydown', function(e) {
+                    if (e.key === 'Escape' && !modal.classList.contains('pointer-events-none')) {
+                        closeModal();
+                    }
                 });
             });
         </script>
