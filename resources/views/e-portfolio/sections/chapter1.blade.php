@@ -1,7 +1,50 @@
 <!-- filepath: c:\xampp\htdocs\Portfolio\portfolio-blade-v1\resources\views\e-portfolio\sections\chapter1.blade.php -->
 <div class="w-full py-20 px-6 relative overflow-hidden bg-[#FDFDFC] dark:bg-[#0a0a0a]">
     <div class="max-w-6xl mx-auto">
-        <h2 class="text-3xl font-bold mb-8 dark:text-[#EDEDEC]">Chapter 1: Introduction</h2>
+        <div class="relative mb-12 overflow-hidden">
+            <!-- Laravel-inspired decorative elements -->
+            <div class="absolute -top-16 right-0 w-64 h-64 opacity-5 dark:opacity-10">
+            <div class="w-full h-full relative">
+                <div class="absolute w-32 h-32 rounded-lg border-4 border-[#f53003] dark:border-[#FF4433] rotate-12 top-10 right-10"></div>
+                <div class="absolute w-24 h-24 rounded-lg bg-[#f53003] dark:bg-[#FF4433] opacity-20 -rotate-12 top-16 right-20"></div>
+            </div>
+            </div>
+            
+            <div class="text-center relative z-10">
+            <!-- Laravel-style badge -->
+            <div class="inline-block mb-4">
+                <span class="bg-[#f53003]/10 dark:bg-[#FF4433]/20 text-[#f53003] dark:text-[#FF4433] text-xs font-mono py-1 px-3 rounded-full border border-[#f53003]/20 dark:border-[#FF4433]/30">
+                journey:start
+                </span>
+            </div>
+            
+            <h2 class="text-3xl md:text-5xl font-bold mb-3 dark:text-[#EDEDEC] leading-tight">
+                <span class="text-[#f53003] dark:text-[#FF4433]">Chapter</span> <span class="font-light">One</span>
+                <div class="h-1 w-24 md:w-32 bg-gradient-to-r from-[#f53003] to-transparent dark:from-[#FF4433] mx-auto mt-2"></div>
+            </h2>
+            
+            <h3 class="text-xl md:text-2xl font-normal dark:text-[#EDEDEC] mb-4 font-mono">
+                Introduction
+            </h3>
+            
+            <p class="max-w-xl mx-auto text-gray-600 dark:text-[#A1A09A] text-sm mb-6">
+                An overview of my internship - its importance, objectives, and professional development foundation.
+            </p>
+            
+            <!-- Code-like element -->
+            <div class="inline-block text-left bg-gray-100 dark:bg-gray-900 p-2 rounded-md font-mono text-xs text-gray-700 dark:text-gray-300 mb-5">
+                <div><span class="text-blue-600 dark:text-blue-400">const</span> <span class="text-purple-600 dark:text-purple-400">journey</span> = <span class="text-green-600 dark:text-green-400">new</span> <span class="text-orange-600 dark:text-orange-400">Experience</span>();</div>
+                <div><span class="text-purple-600 dark:text-purple-400">journey</span>.<span class="text-blue-600 dark:text-blue-400">start</span>();</div>
+            </div>
+            
+            <!-- Animated scroll indicator -->
+            <div class="flex justify-center mt-4">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-[#f53003] dark:text-[#FF4433] animate-bounce" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+                </svg>
+            </div>
+            </div>
+        </div>
         
         <!-- Section A: Importance of Internship -->
         <div class="bg-white dark:bg-[#161615] p-6 rounded-xl shadow-md mb-12">

@@ -368,15 +368,15 @@
             
             <!-- Chapter 2 Section -->
             <section id="chapter-2" class="pt-16 min-h-screen">
-                <div class="w-full py-20 px-6">
-                    <h2 class="text-3xl font-bold mb-8 dark:text-[#EDEDEC]">Chapter 2</h2>
-                    <p class="text-lg dark:text-[#A1A09A]">Content coming soon...</p>
-                </div>
+                  @include('e-portfolio.sections.chapter2')
             </section>
             
             <!-- Chapter 3 Section -->
             <section id="chapter-3" class="pt-16">
-                {{-- @include('e-portfolio.sections.chapter3') --}}
+                <div class="w-full py-20 px-6">
+                    <h2 class="text-3xl font-bold mb-8 dark:text-[#EDEDEC]">Chapter 3</h2>
+                    <p class="text-lg dark:text-[#A1A09A]">Content coming soon...</p>
+                </div>
             </section>
             
             <!-- Chapter 4 Section -->
