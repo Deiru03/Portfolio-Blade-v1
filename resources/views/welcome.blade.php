@@ -66,6 +66,7 @@
                                 </svg>
                             </button>
                             <div class="absolute right-0 mt-2 w-48 bg-white dark:bg-[#161615] rounded-md shadow-lg py-1 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50 transform origin-top scale-95 group-hover:scale-100">
+                                <a href="{{ route('e-portfolio.intro') }}" class="block px-4 py-2 dark:text-[#EDEDEC] text-[#1b1b18] hover:bg-[#fff2f2] dark:hover:bg-[#1D0002] hover:text-[#f53003] dark:hover:text-[#FF4433]">Introducion</a>
                                 <a href="#table-of-contents" class="block px-4 py-2 dark:text-[#EDEDEC] text-[#1b1b18] hover:bg-[#fff2f2] dark:hover:bg-[#1D0002] hover:text-[#f53003] dark:hover:text-[#FF4433]">Table of Contents</a>
                                 <a href="#chapter-1" class="block px-4 py-2 dark:text-[#EDEDEC] text-[#1b1b18] hover:bg-[#fff2f2] dark:hover:bg-[#1D0002] hover:text-[#f53003] dark:hover:text-[#FF4433]">Chapter 1</a>
                                 <a href="#chapter-2" class="block px-4 py-2 dark:text-[#EDEDEC] text-[#1b1b18] hover:bg-[#fff2f2] dark:hover:bg-[#1D0002] hover:text-[#f53003] dark:hover:text-[#FF4433]">Chapter 2</a>
@@ -95,6 +96,7 @@
                             </svg>
                         </button>
                         <div id="mobile-dropdown-menu" class="hidden pl-4 mt-2 border-l-2 border-[#f5f5f5] dark:border-[#222]">
+                            <a href="{{route('e-portfolio.intro')}}" class="block py-2 dark:text-[#EDEDEC] text-[#1b1b18] hover:text-[#f53003] dark:hover:text-[#FF4433]">Introduction</a>
                             <a href="#table-of-contents" class="block py-2 dark:text-[#EDEDEC] text-[#1b1b18] hover:text-[#f53003] dark:hover:text-[#FF4433]">Table of Contents</a>
                             <a href="#chapter-1" class="block py-2 dark:text-[#EDEDEC] text-[#1b1b18] hover:text-[#f53003] dark:hover:text-[#FF4433]">Chapter 1</a>
                             <a href="#chapter-2" class="block py-2 dark:text-[#EDEDEC] text-[#1b1b18] hover:text-[#f53003] dark:hover:text-[#FF4433]">Chapter 2</a>
@@ -213,6 +215,25 @@
                             
                             <div class="overflow-y-auto max-h-[70vh]">
                                 <div class="grid md:grid-cols-2 gap-6">
+                                    <!-- Introduction Card -->
+                                    <div class="bg-[#FDFDFC] dark:bg-[#0a0a0a] rounded-lg overflow-hidden shadow-[0px_1px_2px_0px_rgba(0,0,0,0.06)] dark:shadow-[inset_0px_0px_0px_1px_#fffaed2d] hover:shadow-md transition-shadow duration-300">
+                                        <div class="h-32 bg-[#fff2f2] dark:bg-[#1D0002] flex items-center justify-center">
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="h-16 w-16 text-[#f53003] dark:text-[#FF4433]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" />
+                                            </svg>
+                                        </div>
+                                        <div class="p-4">
+                                            <h4 class="text-lg font-medium mb-2 dark:text-[#EDEDEC]">Introduction</h4>
+                                            <p class="text-sm dark:text-[#A1A09A] mb-4">Overview of portfolio purpose, background, and learning objectives</p>
+                                            <a href="{{route('e-portfolio.intro')}}" class="group inline-flex items-center text-[#f53003] dark:text-[#FF4433] hover:underline">
+                                                View
+                                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1 transform group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                                                </svg>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    
                                     <!-- TOC Card -->
                                     <div class="bg-[#FDFDFC] dark:bg-[#0a0a0a] rounded-lg overflow-hidden shadow-[0px_1px_2px_0px_rgba(0,0,0,0.06)] dark:shadow-[inset_0px_0px_0px_1px_#fffaed2d] hover:shadow-md transition-shadow duration-300">
                                         <div class="h-32 bg-[#fff2f2] dark:bg-[#1D0002] flex items-center justify-center">
