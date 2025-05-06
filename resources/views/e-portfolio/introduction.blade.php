@@ -143,6 +143,8 @@
                         <p class="text-sm dark:text-[#A1A09A]">This e-portfolio serves as documentation of my learning journey and professional development during my OJT experience. It reflects not only the technical skills I've acquired but also the professional growth I've achieved.</p>
                     </div>
                 </div>
+
+                {{-- Acknowledgements --}}
                 <h3 class="text-xl font-medium mt-8 mb-3 dark:text-[#EDEDEC]">Acknowledgements</h3>
 
                 <div class="prose prose-sm dark:prose-invert max-w-none">
@@ -170,6 +172,85 @@
                         Above all, I thank Almighty God for His strength, wisdom, and guidance, which have carried me through to the end of this training. I will carry these lessons and memories with me as I step forward into my future career.
                     </p>
                 </div>
+
+                {{-- Personal Philosophy --}}
+                <h3 class="text-xl font-medium mt-10 mb-3 dark:text-[#EDEDEC]">Personal Philosophy</h3>
+
+                <div class="prose prose-sm dark:prose-invert max-w-none">
+                    <h4 class="text-lg font-medium mb-4 dark:text-[#EDEDEC] text-center">Progress Through Learning and Purpose</h4>
+                    
+                    <p class="dark:text-[#A1A09A] mb-4">
+                        I believe true progress stems from constant learning and a clear sense of purpose. Since childhood, my curiosity—especially about the marvels of technology—has driven me to explore how things work. I've long held that knowledge and persistent effort transform our lives and empower us to lift others along the way.
+                    </p>
+                    
+                    <p class="dark:text-[#A1A09A] mb-4">
+                        For me, growth isn't about being the best—it's about remaining steadfast in the face of challenges, with every hurdle offering a lesson in resilience. I also believe that success finds its greatest value when shared, so I commit to using what I learn to make a positive impact. Honesty, patience, and respect are the cornerstones of my journey.
+                    </p>
+                    
+                    <div class="p-4 bg-blue-50 dark:bg-blue-900/20 border-l-4 border-blue-500 dark:border-blue-400 rounded my-6">
+                        <p class="dark:text-blue-300 text-blue-800 font-medium italic text-center">
+                            "Forge your path with purpose, and let each lesson build a brighter future."
+                        </p>
+                    </div>
+                </div>
+
+                {{-- Career Plan --}}
+                <h3 class="text-xl font-medium mt-10 mb-3 dark:text-[#EDEDEC]">Career Plan</h3>
+
+                <div class="prose prose-sm dark:prose-invert max-w-none">
+                    <!-- Condensed version (always visible) -->
+                    <p class="dark:text-[#A1A09A] mb-4">
+                        As a dedicated full stack developer with expertise in Laravel PHP framework, I'm building my career through continuous learning and real-world applications. My portfolio includes projects like IQA ClearVault for OMSC, along with freelance work demonstrating my skills in Laravel, Node.js, and MySQL.
+                    </p>
+                    
+                    <!-- Expandable section -->
+                    <div x-data="{ expanded: false }">
+                        <!-- Read more button -->
+                        <button 
+                            @click="expanded = !expanded" 
+                            class="text-sm flex items-center text-[#f53003] dark:text-[#FF4433] hover:underline focus:outline-none mb-4"
+                        >
+                            <span x-text="expanded ? 'Read less' : 'Read more'">Read more</span>
+                            <svg 
+                                xmlns="http://www.w3.org/2000/svg" 
+                                class="h-4 w-4 ml-1 transition-transform duration-200" 
+                                :class="{'rotate-180': expanded}"
+                                fill="none" 
+                                viewBox="0 0 24 24" 
+                                stroke="currentColor"
+                            >
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                            </svg>
+                        </button>
+                        
+                        <!-- Expanded content -->
+                        <div 
+                            x-show="expanded"
+                            x-transition:enter="transition ease-out duration-200"
+                            x-transition:enter-start="opacity-0 transform -translate-y-4"
+                            x-transition:enter-end="opacity-100 transform translate-y-0"
+                            x-transition:leave="transition ease-in duration-200"
+                            x-transition:leave-start="opacity-100 transform translate-y-0"
+                            x-transition:leave-end="opacity-0 transform -translate-y-4"
+                            class="mb-4"
+                        >
+                            <p class="dark:text-[#A1A09A] mb-4">
+                                With the successful completion of my Information Technology studies, I am prepared to embark on my career as a main developer. Although programming was initially unfamiliar, my journey—with roots in Java and an evolution from Visual Basic—ignited a passion that transformed me into a full stack developer.
+                            </p>
+                            
+                            <p class="dark:text-[#A1A09A] mb-4">
+                                Dedicated to advancing my professional capabilities, I am assembling an online portfolio that showcases my work in detail. This includes my major capstone project, IQA ClearVault, developed and hosted for Occidental Mindoro State College. In addition to freelance commissions, I consistently refine my skills using tools such as Laravel, Node.js, and MySQL, while also expanding my knowledge in business analysis and basic data analytics.
+                            </p>
+                            
+                            <p class="dark:text-[#A1A09A] mb-4">
+                                By actively engaging in internships, freelance assignments, and volunteer work, I leverage technology to tackle tangible challenges. I am particularly committed to making a meaningful impact in underserved communities, such as my hometown in Occidental Mindoro.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Add Alpine.js for the toggle functionality if you don't already have it -->
+                <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
             </div>
         </div>
     </div>

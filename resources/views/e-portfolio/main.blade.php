@@ -213,6 +213,153 @@
             <section id="intro">
                 @include('e-portfolio.introduction')
             </section>
+
+            <!-- Table of Contents Section -->
+            <section id="table-of-contents" class="pt-16">
+                <div class="container mx-auto px-4 py-16 max-w-5xl">
+                    <h2 class="text-3xl font-bold mb-8 dark:text-[#EDEDEC]">Table of Contents</h2>
+                    
+                    <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+                        <!-- Introduction -->
+                        <a href="#intro" class="p-6 border border-gray-200 dark:border-gray-800 rounded-lg shadow-sm hover:shadow-md transition-all bg-white dark:bg-gray-900 group">
+                            <h3 class="text-xl font-semibold mb-2 group-hover:text-[#FF4433] dark:text-[#EDEDEC]">Introduction</h3>
+                            <p class="text-gray-600 dark:text-gray-400 mb-4">An overview of my journey and professional development.</p>
+                            <div class="flex items-center text-[#FF4433]">
+                                <span class="text-sm">Read More</span>
+                                <svg class="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                                </svg>
+                            </div>
+                        </a>
+                        
+                        <!-- Chapter 1 -->
+                        <a href="#chapter-1" class="p-6 border border-gray-200 dark:border-gray-800 rounded-lg shadow-sm hover:shadow-md transition-all bg-white dark:bg-gray-900 group relative">
+                            <h3 class="text-xl font-semibold mb-2 group-hover:text-[#FF4433] dark:text-[#EDEDEC]">Chapter 1</h3>
+                            <p class="text-gray-600 dark:text-gray-400 mb-4">Professional development and competencies.</p>
+                            <div class="flex items-center text-[#FF4433]">
+                                <span class="text-sm">Read More</span>
+                                <svg class="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                                </svg>
+                            </div>
+                            <!-- Hover Popup for Chapter 1 -->
+                            <div class="absolute left-0 top-0 transform -translate-y-full opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none z-50 w-64 bg-white dark:bg-gray-800 shadow-xl rounded-lg p-4 border border-gray-200 dark:border-gray-700 mb-2">
+                                <h4 class="font-semibold text-sm mb-2 text-[#FF4433]">CHAPTER I: INTRODUCTION</h4>
+                                <ul class="text-xs text-gray-700 dark:text-gray-300 space-y-1">
+                                    <li>• A. Importance of Internship</li>
+                                    <li>• B. Objectives of Internship</li>
+                                    <li>• C. Time and Place of the Internship</li>
+                                </ul>
+                                <div class="absolute bottom-0 left-1/2 transform translate-y-full -translate-x-1/2 w-4 h-4 rotate-45 bg-white dark:bg-gray-800 border-b border-r border-gray-200 dark:border-gray-700"></div>
+                            </div>
+                        </a>
+                        
+                        <!-- Chapter 2 -->
+                        <a href="#chapter-2" class="p-6 border border-gray-200 dark:border-gray-800 rounded-lg shadow-sm hover:shadow-md transition-all bg-white dark:bg-gray-900 group relative">
+                            <h3 class="text-xl font-semibold mb-2 group-hover:text-[#FF4433] dark:text-[#EDEDEC]">Chapter 2</h3>
+                            <p class="text-gray-600 dark:text-gray-400 mb-4">Key projects and technical achievements.</p>
+                            <div class="flex items-center text-[#FF4433]">
+                                <span class="text-sm">Read More</span>
+                                <svg class="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                                </svg>
+                            </div>
+                            <!-- Hover Popup for Chapter 2 -->
+                            <div class="absolute left-0 top-0 transform -translate-y-full opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none z-50 w-64 bg-white dark:bg-gray-800 shadow-xl rounded-lg p-4 border border-gray-200 dark:border-gray-700 mb-2">
+                                <h4 class="font-semibold text-sm mb-2 text-[#FF4433]">CHAPTER II: COMPANY PROFILE</h4>
+                                <ul class="text-xs text-gray-700 dark:text-gray-300 space-y-1">
+                                    <li>• 1. Nature of the Agency</li>
+                                    <li>• 2. Mission/Vision/Goal Statement</li>
+                                    <li>• 3. History/Background of the Agency/Office</li>
+                                    <li>• 4. Organizational Structure</li>
+                                </ul>
+                                <div class="absolute bottom-0 left-1/2 transform translate-y-full -translate-x-1/2 w-4 h-4 rotate-45 bg-white dark:bg-gray-800 border-b border-r border-gray-200 dark:border-gray-700"></div>
+                            </div>
+                        </a>
+                        
+                        <!-- Chapter 3 -->
+                        <a href="#chapter-3" class="p-6 border border-gray-200 dark:border-gray-800 rounded-lg shadow-sm hover:shadow-md transition-all bg-white dark:bg-gray-900 group relative">
+                            <h3 class="text-xl font-semibold mb-2 group-hover:text-[#FF4433] dark:text-[#EDEDEC]">Chapter 3</h3>
+                            <p class="text-gray-600 dark:text-gray-400 mb-4">Industry experience and collaborations.</p>
+                            <div class="flex items-center text-[#FF4433]">
+                                <span class="text-sm">Read More</span>
+                                <svg class="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                                </svg>
+                            </div>
+                            <!-- Hover Popup for Chapter 3 -->
+                            <div class="absolute left-0 top-0 transform -translate-y-full opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none z-50 w-64 bg-white dark:bg-gray-800 shadow-xl rounded-lg p-4 border border-gray-200 dark:border-gray-700 mb-2">
+                                <h4 class="font-semibold text-sm mb-2 text-[#FF4433]">CHAPTER III: WORK EXPERIENCES</h4>
+                                <ul class="text-xs text-gray-700 dark:text-gray-300 space-y-1">
+                                    <li>• 1. Weekly accomplishment report</li>
+                                    <li>• 2. Daily Time Record</li>
+                                    <li>• 3. Internship Progress Report</li>
+                                    <li>• 4. Internship Analysis Report</li>
+                                </ul>
+                                <div class="absolute bottom-0 left-1/2 transform translate-y-full -translate-x-1/2 w-4 h-4 rotate-45 bg-white dark:bg-gray-800 border-b border-r border-gray-200 dark:border-gray-700"></div>
+                            </div>
+                        </a>
+                        
+                        <!-- Chapter 4 -->
+                        <a href="#chapter-4" class="p-6 border border-gray-200 dark:border-gray-800 rounded-lg shadow-sm hover:shadow-md transition-all bg-white dark:bg-gray-900 group relative">
+                            <h3 class="text-xl font-semibold mb-2 group-hover:text-[#FF4433] dark:text-[#EDEDEC]">Chapter 4</h3>
+                            <p class="text-gray-600 dark:text-gray-400 mb-4">Future goals and continuous improvement.</p>
+                            <div class="flex items-center text-[#FF4433]">
+                                <span class="text-sm">Read More</span>
+                                <svg class="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                                </svg>
+                            </div>
+                            <!-- Hover Popup for Chapter 4 -->
+                            <div class="absolute left-0 top-0 transform -translate-y-full opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none z-50 w-64 bg-white dark:bg-gray-800 shadow-xl rounded-lg p-4 border border-gray-200 dark:border-gray-700 mb-2">
+                                <h4 class="font-semibold text-sm mb-2 text-[#FF4433]">CHAPTER IV: ASSESSMENT</h4>
+                                <ul class="text-xs text-gray-700 dark:text-gray-300 space-y-1">
+                                    <li>• 1. Student Internship Evaluation Form</li>
+                                </ul>
+                                <div class="absolute bottom-0 left-1/2 transform translate-y-full -translate-x-1/2 w-4 h-4 rotate-45 bg-white dark:bg-gray-800 border-b border-r border-gray-200 dark:border-gray-700"></div>
+                            </div>
+                        </a>
+                        
+                        <!-- Appendices -->
+                        <a href="#appendices" class="p-6 border border-gray-200 dark:border-gray-800 rounded-lg shadow-sm hover:shadow-md transition-all bg-white dark:bg-gray-900 group relative">
+                            <h3 class="text-xl font-semibold mb-2 group-hover:text-[#FF4433] dark:text-[#EDEDEC]">Appendices</h3>
+                            <p class="text-gray-600 dark:text-gray-400 mb-4">Additional resources and supporting materials.</p>
+                            <div class="flex items-center text-[#FF4433]">
+                                <span class="text-sm">Read More</span>
+                                <svg class="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                                </svg>
+                            </div>
+                            <!-- Hover Popup for Appendices -->
+                            <div class="absolute left-0 top-0 transform -translate-y-full opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none z-50 w-72 bg-white dark:bg-gray-800 shadow-xl rounded-lg p-4 border border-gray-200 dark:border-gray-700 mb-2">
+                                <h4 class="font-semibold text-sm mb-2 text-[#FF4433]">APPENDICES</h4>
+                                <ul class="text-xs text-gray-700 dark:text-gray-300 space-y-1">
+                                    <li>• Appendix A: Evaluation Form</li>
+                                    <li>• Appendix B: Photocopy Registration Form</li>
+                                    <li>• Appendix C: Photocopy Validated ID</li>
+                                    <li>• Appendix D: Parent's Consent</li>
+                                    <li>• Appendix E: Medical Certificate</li>
+                                    <li>• Appendix F: Certificate of Good Moral Character</li>
+                                    <li>• Appendix G: Application Letter</li>
+                                    <li>• Appendix H: Endorsement Letter</li>
+                                    <li>• Appendix I: Memorandum of Agreement</li>
+                                    <li>• Appendix J: Daily Time Record (Time Card)</li>
+                                    <li>• Appendix K: Certificate of Completion</li>
+                                    <li>• Appendix L: Certificate of Clearance</li>
+                                    <li>• Appendix M: Performance/Proficiency Rating Sheet</li>
+                                    <li>• Appendix N: Pictures during Pre-service Seminar</li>
+                                    <li>• Appendix O: Pictures during Office works</li>
+                                    <li>• Appendix P: Code of Ethics for CAST Student Internship</li>
+                                    <li>• Appendix Q: Curriculum Vitae</li>
+                                    <li>• Appendix R: On-the-Job Training Portfolio Evaluation Form</li>
+                                    <li>• Appendix S: E-Portfolio</li>
+                                </ul>
+                                <div class="absolute bottom-0 left-1/2 transform translate-y-full -translate-x-1/2 w-4 h-4 rotate-45 bg-white dark:bg-gray-800 border-b border-r border-gray-200 dark:border-gray-700"></div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </section>
             
             <!-- Chapter 1 Section -->
             <section id="chapter-1" class="pt-16">
@@ -248,7 +395,7 @@
         
         <script>
             document.addEventListener('DOMContentLoaded', function() {
-                // Smooth scrolling for internal links
+                // Smooth scrolling for internal links (keep this part unchanged)
                 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
                     anchor.addEventListener('click', function(e) {
                         e.preventDefault();
@@ -269,7 +416,7 @@
                     });
                 });
                 
-                // Function to update active dot (both mobile and desktop)
+                // Modified function to update active dot (both mobile and desktop)
                 function updateActiveDot(sectionId) {
                     console.log("Activating section:", sectionId); // Debug
                     
@@ -289,15 +436,16 @@
                         }
                     });
                     
-                    // Activate the specific desktop dot
+                    // Activate the specific desktop dot - handle both IDs to ensure it works for intro
                     const desktopDot = document.getElementById(`dot-${sectionId}`);
                     if (desktopDot) {
                         desktopDot.classList.add('active', 'bg-[#FF4433]');
                         desktopDot.classList.remove('bg-gray-400', 'dark:bg-gray-500');
                     }
                     
-                    // Activate mobile nav item
-                    const mobileItem = document.getElementById(`mobile-${sectionId}`);
+                    // Activate mobile nav item - handle both IDs to ensure it works for intro
+                    const mobileItemId = `mobile-${sectionId}`;
+                    const mobileItem = document.getElementById(mobileItemId);
                     if (mobileItem) {
                         mobileItem.classList.add('active-section');
                         const dotElement = mobileItem.querySelector('div');
@@ -313,23 +461,25 @@
                 
                 // Add content to empty sections to make them detectable
                 document.querySelectorAll('section[id]:empty').forEach(section => {
-                    if (!section.hasChildNodes()) {
+                    // Check if the section is actually empty (could have commented out code)
+                    if (section.children.length === 0 || 
+                        (section.children.length === 1 && section.firstElementChild.nodeName === 'COMMENT')) {
                         const placeholder = document.createElement('div');
                         placeholder.className = 'w-full py-20 px-6 min-h-screen';
                         placeholder.innerHTML = `<h2 class="text-3xl font-bold mb-8 dark:text-[#EDEDEC]">${section.id.charAt(0).toUpperCase() + section.id.slice(1)}</h2>
-                                            <p class="text-lg dark:text-[#A1A09A]">Content coming soon...</p>`;
+                                                <p class="text-lg dark:text-[#A1A09A]">Content coming soon...</p>`;
                         section.appendChild(placeholder);
                     }
                 });
                 
-                // Intersection Observer for scroll-based section detection
+                // Improved Intersection Observer for scroll-based section detection
                 const sections = document.querySelectorAll('section[id]');
                 console.log("Found sections:", sections.length); // Debug
                 
                 const observerOptions = {
                     root: null,
-                    rootMargin: '-10% 0px -10% 0px', // More sensitive detection
-                    threshold: [0.1, 0.5]  // Detect at multiple thresholds
+                    rootMargin: '-5% 0px -5% 0px', // More sensitive detection for intro section
+                    threshold: [0.05, 0.1, 0.5]  // Multiple thresholds with a very low first value
                 };
                 
                 const observer = new IntersectionObserver((entries) => {
@@ -338,6 +488,9 @@
                     let maxRatio = 0;
                     
                     entries.forEach(entry => {
+                        // Debug info to see what's happening
+                        console.log(`Section ${entry.target.id}: intersecting=${entry.isIntersecting}, ratio=${entry.intersectionRatio}`);
+                        
                         if (entry.isIntersecting && entry.intersectionRatio > maxRatio) {
                             maxRatio = entry.intersectionRatio;
                             maxSection = entry.target;
@@ -356,7 +509,14 @@
                     console.log("Observing section:", section.id); // Debug
                 });
                 
-                // Add no-scrollbar utility via CSS
+                // Additional handler for top of page to ensure intro is activated
+                window.addEventListener('scroll', function() {
+                    if (window.scrollY < 100) { // If we're at the very top of the page
+                        updateActiveDot('intro');
+                    }
+                });
+                
+                // Add no-scrollbar utility via CSS (unchanged)
                 const style = document.createElement('style');
                 style.textContent = `
                     /* Hide scrollbar for Chrome, Safari and Opera */
