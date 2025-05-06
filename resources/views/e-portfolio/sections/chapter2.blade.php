@@ -322,6 +322,334 @@
                 </div>
             </div>
         </div>
+
+        <div class="bg-white dark:bg-[#161615] p-6 rounded-xl shadow-md mb-12">
+            <h3 class="text-2xl font-medium mb-6 dark:text-[#EDEDEC] relative overflow-hidden">
+                III. History / Background of the Agency
+                <span class="absolute bottom-0 left-0 w-1/4 h-[3px] bg-[#f53003] dark:bg-[#FF4433] animate-pulse"></span>
+            </h3>
+            
+            <div class="prose prose-sm dark:prose-invert max-w-none">
+                <!-- Featured Image -->
+                <div class="my-8 relative">
+                    <div class="aspect-video rounded-lg overflow-hidden shadow-lg border border-gray-200 dark:border-gray-700">
+                        <img src="{{ asset('images/chapter2/devopsmeet5.png') }}" alt="DevOps Outsourcing Inc. Team" class="w-full h-full object-cover">
+                    </div>
+                    <div class="absolute -bottom-3 -right-3 w-20 h-20 bg-[#f53003]/10 dark:bg-[#FF4433]/20 rounded-full blur-xl"></div>
+                    <div class="absolute -top-3 -left-3 w-20 h-20 bg-[#f53003]/10 dark:bg-[#FF4433]/20 rounded-full blur-xl"></div>
+                    <p class="text-sm text-center text-gray-500 dark:text-gray-400 mt-3 italic">
+                        DevOps Outsourcing Inc. team during a virtual planning session
+                    </p>
+                </div>
+                
+                <p class="dark:text-[#A1A09A] mb-4">
+                    DevOps Outsourcing Inc is an innovative startup company specializing in business process consulting and the design and development of tailor-made IT solutions. Established recently, the company is driven by a passion for helping businesses optimize their operations and achieve their goals through technology-driven solutions.
+                </p>
+                
+                <div class="flex flex-col md:flex-row gap-6 my-8">
+                    <div class="flex-1">
+                        <div class="bg-[#FDFDFC] dark:bg-[#0a0a0a] p-5 rounded-lg border border-gray-100 dark:border-gray-800 h-full relative overflow-hidden">
+                            <div class="absolute -right-4 -bottom-4 w-24 h-24 bg-[#f53003]/5 dark:bg-[#FF4433]/10 rounded-full"></div>
+                            <h4 class="text-lg font-medium mb-3 dark:text-[#EDEDEC] flex items-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2 text-[#f53003] dark:text-[#FF4433]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                                </svg>
+                                Location and Focus
+                            </h4>
+                            <p class="dark:text-[#A1A09A] mb-3 relative z-10">
+                                Located in Makati City, Philippines, DevOps Outsourcing Inc focuses on delivering personalized services to its clients. Their primary expertise lies in business process consulting, where they collaborate closely with companies to identify areas of improvement, streamline processes, and enhance overall efficiency.
+                            </p>
+                            <p class="dark:text-[#A1A09A] relative z-10">
+                                By leveraging their in-depth industry knowledge and experience, they provide strategic guidance to help organizations overcome operational challenges and achieve sustainable growth.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="flex-1">
+                        <div class="bg-[#FDFDFC] dark:bg-[#0a0a0a] p-5 rounded-lg border border-gray-100 dark:border-gray-800 h-full relative overflow-hidden">
+                            <div class="absolute -left-4 -top-4 w-24 h-24 bg-[#f53003]/5 dark:bg-[#FF4433]/10 rounded-full"></div>
+                            <h4 class="text-lg font-medium mb-3 dark:text-[#EDEDEC] flex items-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2 text-[#f53003] dark:text-[#FF4433]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
+                                </svg>
+                                Technical Expertise
+                            </h4>
+                            <p class="dark:text-[#A1A09A] mb-3 relative z-10">
+                                In addition to their consulting services, DevOps Outsourcing Inc excels in designing and developing custom IT solutions. They specialize in creating web and mobile applications from scratch, tailoring each solution to meet the unique requirements of their clients.
+                            </p>
+                            <p class="dark:text-[#A1A09A] relative z-10">
+                                With a team of skilled developers and designers, they combine cutting-edge technologies with a deep understanding of client objectives to deliver high-quality and intuitive software applications.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                
+                <h4 class="text-xl font-medium mt-8 mb-4 dark:text-[#EDEDEC]">Customer-Centric Philosophy</h4>
+                
+                <div class="p-5 bg-gradient-to-br from-[#fff2f2] to-white dark:from-[#1D0002] dark:to-[#0a0a0a] rounded-lg border border-[#f53003]/20 dark:border-[#FF4433]/20 mb-6 relative overflow-hidden">
+                    <div class="absolute -right-8 -bottom-8 w-24 h-24 bg-[#f53003]/10 dark:bg-[#FF4433]/20 rounded-full blur-xl"></div>
+                    <p class="dark:text-[#A1A09A] mb-4 relative z-10">
+                        DevOps Outsourcing Inc prides itself on its customer-centric approach. They prioritize understanding their clients' specific needs, goals, and challenges before crafting solutions that address those pain points effectively. By fostering close partnerships and clear communication, they ensure that the final deliverables align with clients' expectations and contribute to their long-term success.
+                    </p>
+                    <p class="dark:text-[#A1A09A] relative z-10">
+                        As a startup company, DevOps Outsourcing Inc aims to make a mark in the industry by providing top-notch services and driving innovation. Their agility and flexibility allow them to adapt quickly to emerging technologies and industry trends, enabling them to stay at the forefront of the ever-evolving IT landscape.
+                    </p>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 my-8">
+                    <div class="bg-[#FDFDFC] dark:bg-[#0a0a0a] p-5 rounded-lg border border-gray-100 dark:border-gray-800">
+                        <h5 class="font-medium text-[#f53003] dark:text-[#FF4433] mb-4 flex items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+                            </svg>
+                            Target Market
+                        </h5>
+                        <p class="dark:text-[#A1A09A]">
+                            DevOps Outsourcing Inc primarily serves small to medium-sized businesses across various sectors. Their location in Makati City provides them with access to a vibrant business ecosystem and a talented pool of professionals, fostering collaboration and growth.
+                        </p>
+                    </div>
+                    
+                    <div class="bg-[#FDFDFC] dark:bg-[#0a0a0a] p-5 rounded-lg border border-gray-100 dark:border-gray-800">
+                        <h5 class="font-medium text-[#f53003] dark:text-[#FF4433] mb-4 flex items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
+                            </svg>
+                            Future Outlook
+                        </h5>
+                        <p class="dark:text-[#A1A09A]">
+                            Moving forward, DevOps Outsourcing Inc is dedicated to expanding its service offerings, exploring new opportunities, and forging strong partnerships with clients. By delivering business process consulting and designing tailor-made IT solutions, the company aims to empower businesses to thrive in a digital-first world.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="p-4 bg-[#fff2f2] dark:bg-[#1D0002] rounded-lg border-l-4 border-[#f53003] dark:border-[#FF4433] my-8">
+                    <p class="italic text-[#f53003] dark:text-[#FF4433] font-medium">
+                        "At DevOps Outsourcing Inc, we believe that technology should enable and empower businesses, not complicate them. Our mission is to simplify complexity and deliver solutions that drive real value."
+                    </p>
+                    <p class="text-right text-sm mt-2 text-gray-600 dark:text-gray-400">— DevOps Outsourcing Inc. Leadership Team</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Section IV: Organizational Chart -->
+        <div class="bg-white dark:bg-[#161615] p-6 rounded-xl shadow-md mb-12">
+            <h3 class="text-2xl font-medium mb-6 dark:text-[#EDEDEC] relative overflow-hidden">
+                IV. Organizational Chart
+                <span class="absolute bottom-0 left-0 w-1/4 h-[3px] bg-[#f53003] dark:bg-[#FF4433] animate-pulse"></span>
+            </h3>
+            
+            <div class="prose prose-sm dark:prose-invert max-w-none">
+                <p class="dark:text-[#A1A09A] mb-6">
+                    The organizational structure at DevOps Outsourcing Inc. follows a hierarchical yet collaborative approach, allowing for efficient communication and streamlined decision-making processes while fostering innovation and cross-functional collaboration.
+                </p>
+                
+                <!-- Organizational Chart -->
+                <div class="org-chart-container overflow-x-auto pb-12">
+                    <div class="org-chart inline-block min-w-max mx-auto">
+                        <!-- Board of Directors -->
+                        <div class="flex justify-center mb-6">
+                            <div class="bg-[#f53003] dark:bg-[#FF4433] text-white px-4 py-3 rounded-lg shadow-md w-72 text-center">
+                                <h5 class="font-medium text-white mb-1">Board of Directors</h5>
+                                <p class="text-xs text-white/80">Borja Hernandez, Julio Endara, Mikael Cardoso, Daniel Margoy, Scott Darrow, Jasper Blues</p>
+                            </div>
+                        </div>
+                        
+                        <!-- Line from Board to CEO -->
+                        <div class="flex justify-center">
+                            <div class="w-px h-6 bg-gray-300 dark:bg-gray-700"></div>
+                        </div>
+                        
+                        <!-- CEO -->
+                        <div class="flex justify-center mb-6">
+                            <div class="bg-[#fff2f2] dark:bg-[#1D0002] border border-[#f53003] dark:border-[#FF4433] px-4 py-3 rounded-lg shadow-md w-64 text-center">
+                                <h5 class="font-medium text-[#f53003] dark:text-[#FF4433] mb-1">Borja Hernandez</h5>
+                                <p class="text-xs dark:text-[#A1A09A]">CEO</p>
+                            </div>
+                        </div>
+                        
+                        <!-- Line from CEO to Department Heads -->
+                        <div class="flex justify-center">
+                            <div class="w-[80%] h-px bg-gray-300 dark:bg-gray-700 mb-6"></div>
+                        </div>
+                        
+                        <!-- Department Heads -->
+                        <div class="flex flex-wrap justify-center gap-4 mb-8">
+                            <!-- Technical BE Lead -->
+                            <div class="relative">
+                                <div class="flex flex-col items-center">
+                                    <div class="w-px h-6 bg-gray-300 dark:bg-gray-700 mb-2"></div>
+                                    <div class="bg-white dark:bg-[#0a0a0a] border border-gray-200 dark:border-gray-800 px-3 py-2 rounded-lg shadow-md w-48 text-center">
+                                        <h6 class="font-medium dark:text-[#EDEDEC] mb-1">Aleksei Garbarev</h6>
+                                        <p class="text-xs text-[#f53003] dark:text-[#FF4433]">Technical BE Lead</p>
+                                    </div>
+                                </div>
+                                
+                                <!-- Team under Technical BE Lead -->
+                                <div class="flex justify-center mt-2">
+                                    <div class="w-full h-px bg-gray-200 dark:bg-gray-800"></div>
+                                </div>
+                                <div class="flex justify-around mt-2">
+                                    <div class="flex flex-col items-center">
+                                        <div class="w-px h-4 bg-gray-200 dark:bg-gray-800"></div>
+                                        <div class="bg-[#FDFDFC] dark:bg-[#0a0a0a] border-t border-l border-r border-gray-200 dark:border-gray-800 px-2 py-1 rounded-t-lg w-36 text-center">
+                                            <p class="text-xs dark:text-[#A1A09A]">Back-End Developers:</p>
+                                            <p class="text-xs font-medium dark:text-[#EDEDEC]">Dmitriy Pomazunovskiy, Ivan Pintor, Ivan Zezyulya</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- IT Security Manager -->
+                            <div class="relative">
+                                <div class="flex flex-col items-center">
+                                    <div class="w-px h-6 bg-gray-300 dark:bg-gray-700 mb-2"></div>
+                                    <div class="bg-white dark:bg-[#0a0a0a] border-l-4 border-[#f53003]/70 dark:border-[#FF4433]/70 border-t border-r border-b border-gray-200 dark:border-gray-800 px-3 py-2 rounded-lg shadow-md hover:shadow-lg transition-all w-48 text-center transform hover:-translate-y-1 duration-300">
+                                        <h6 class="font-medium dark:text-[#EDEDEC] mb-1">Edgar Jaria</h6>
+                                        <p class="text-xs text-[#f53003] dark:text-[#FF4433]">IT Security Manager (CISO)</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Finance Consultant -->
+                            <div class="relative">
+                                <div class="flex flex-col items-center">
+                                    <div class="w-px h-6 bg-gray-300 dark:bg-gray-700 mb-2"></div>
+                                    <div class="bg-white dark:bg-[#0a0a0a] border-l-4 border-[#f53003]/70 dark:border-[#FF4433]/70 border-t border-r border-b border-gray-200 dark:border-gray-800 px-3 py-2 rounded-lg shadow-md hover:shadow-lg transition-all w-48 text-center transform hover:-translate-y-1 duration-300">
+                                        <h6 class="font-medium dark:text-[#EDEDEC] mb-1">Jose Manuel Pablo</h6>
+                                        <p class="text-xs text-[#f53003] dark:text-[#FF4433]">Finance Consultant</p>
+                                    </div>
+                                </div>
+                                
+                                <!-- Finance Team -->
+                                <div class="flex justify-center mt-3">
+                                    <div class="w-px h-8 bg-gradient-to-b from-gray-300 to-gray-200 dark:from-gray-700 dark:to-gray-800"></div>
+                                </div>
+                                <div class="flex justify-center mt-1">
+                                    <div class="bg-[#FDFDFC] dark:bg-[#0a0a0a] border border-gray-200 dark:border-gray-800 px-3 py-2 rounded-lg shadow-sm hover:shadow-md transition-all w-40 text-center transform hover:-translate-y-1 duration-300">
+                                        <h6 class="text-xs font-medium dark:text-[#EDEDEC]">Mary Ann Caratao</h6>
+                                        <p class="text-xs dark:text-[#A1A09A]">Finance and Admin</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Project Manager -->
+                            <div class="relative">
+                                <div class="flex flex-col items-center">
+                                    <div class="w-px h-6 bg-gray-300 dark:bg-gray-700 mb-2"></div>
+                                    <div class="bg-white dark:bg-[#0a0a0a] border-l-4 border-[#f53003]/70 dark:border-[#FF4433]/70 border-t border-r border-b border-gray-200 dark:border-gray-800 px-3 py-2 rounded-lg shadow-md hover:shadow-lg transition-all w-48 text-center transform hover:-translate-y-1 duration-300">
+                                        <h6 class="font-medium dark:text-[#EDEDEC] mb-1">Regina Clutario</h6>
+                                        <p class="text-xs text-[#f53003] dark:text-[#FF4433]">Project Manager</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Director -->
+                            <div class="relative">
+                                <div class="flex flex-col items-center">
+                                    <div class="w-px h-6 bg-gray-300 dark:bg-gray-700 mb-2"></div>
+                                    <div class="bg-white dark:bg-[#0a0a0a] border-l-4 border-[#f53003]/70 dark:border-[#FF4433]/70 border-t border-r border-b border-gray-200 dark:border-gray-800 px-3 py-2 rounded-lg shadow-md hover:shadow-lg transition-all w-48 text-center transform hover:-translate-y-1 duration-300">
+                                        <h6 class="font-medium dark:text-[#EDEDEC] mb-1">Monica Villadot</h6>
+                                        <p class="text-xs text-[#f53003] dark:text-[#FF4433]">Director</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Additional Teams -->
+                        <div class="flex flex-wrap justify-center gap-8 mt-8">
+                            <!-- Technical FE Team -->
+                            <div class="bg-gradient-to-br from-white to-[#FDFDFC] dark:from-[#0a0a0a] dark:to-[#111111] border-t border-r border-b border-gray-100 dark:border-gray-800 border-l-4 border-l-[#f53003]/70 dark:border-l-[#FF4433]/70 px-4 py-3 rounded-lg shadow-sm hover:shadow-md transition-all w-64 transform hover:-translate-y-1 duration-300">
+                                <h6 class="text-sm font-medium text-center text-[#f53003] dark:text-[#FF4433] pb-2 border-b border-gray-100 dark:border-gray-800 mb-2">Technical FE Team</h6>
+                                <ul class="text-xs dark:text-[#A1A09A] space-y-2">
+                                    <li class="flex justify-between items-center">
+                                        <span class="font-medium">Mikhail Rublev:</span>
+                                        <span class="bg-[#f53003]/10 dark:bg-[#FF4433]/20 text-[#f53003] dark:text-[#FF4433] px-2 py-0.5 rounded text-[10px]">FE Lead</span>
+                                    </li>
+                                    <li class="pl-2">Randur Duran, Rolando Zabanal</li>
+                                    <li class="pt-2 border-t border-gray-100 dark:border-gray-800 mt-1">
+                                        <span class="font-medium">CIC Developers:</span> 
+                                        <p class="pl-2 mt-1">Lian Robin Castillo, Jesu Manipaz, James Carolino, Jerico Contreras</p>
+                                    </li>
+                                </ul>
+                            </div>
+                            
+                            <!-- QA Team -->
+                            <div class="bg-gradient-to-br from-white to-[#FDFDFC] dark:from-[#0a0a0a] dark:to-[#111111] border-t border-r border-b border-gray-100 dark:border-gray-800 border-l-4 border-l-[#f53003]/70 dark:border-l-[#FF4433]/70 px-4 py-3 rounded-lg shadow-sm hover:shadow-md transition-all w-64 transform hover:-translate-y-1 duration-300">
+                                <h6 class="text-sm font-medium text-center text-[#f53003] dark:text-[#FF4433] pb-2 border-b border-gray-100 dark:border-gray-800 mb-2">Quality Assurance Team</h6>
+                                <ul class="text-xs dark:text-[#A1A09A] space-y-2">
+                                    <li class="pl-2">Olga Garbareva (QA)</li>
+                                    <li class="pl-2">Leanne Palomo (UI/UX Designer)</li>
+                                    <li class="pl-2">Victoria De Jesus (Data Encoder)</li>
+                                    <li class="pl-2">Rechel Punsalan (Consulting)</li>
+                                    <li class="pl-2">Andrea Jhay Castillo (HR and Admin)</li>
+                                </ul>
+                            </div>
+                            
+                            <!-- Business Analysis -->
+                            <div class="bg-gradient-to-br from-white to-[#FDFDFC] dark:from-[#0a0a0a] dark:to-[#111111] border-t border-r border-b border-gray-100 dark:border-gray-800 border-l-4 border-l-[#f53003]/70 dark:border-l-[#FF4433]/70 px-4 py-3 rounded-lg shadow-sm hover:shadow-md transition-all w-64 transform hover:-translate-y-1 duration-300">
+                                <h6 class="text-sm font-medium text-center text-[#f53003] dark:text-[#FF4433] pb-2 border-b border-gray-100 dark:border-gray-800 mb-2">Business Analysis Team</h6>
+                                <ul class="text-xs dark:text-[#A1A09A] space-y-2">
+                                    <li class="pl-2">Alan Fajardo (Mobiz Consultant)</li>
+                                    <li class="flex justify-between items-center">
+                                        <span class="font-medium">Ralph Andal:</span>
+                                        <span class="bg-[#f53003]/10 dark:bg-[#FF4433]/20 text-[#f53003] dark:text-[#FF4433] px-2 py-0.5 rounded text-[10px]">Senior Analyst</span>
+                                    </li>
+                                    <li class="pt-2 border-t border-gray-100 dark:border-gray-800 mt-1">
+                                        <span class="font-medium">Business Analysts:</span>
+                                        <p class="pl-2 mt-1">Laami Castro, Eldrich Guillermo, Gretchen Failanga</p>
+                                    </li>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="mt-8">
+                    <p class="dark:text-[#A1A09A] text-sm">
+                        The organizational structure reflects DevOps Outsourcing Inc's commitment to effective team management and clear lines of communication. The company maintains a balanced hierarchy that provides necessary oversight while encouraging collaboration and innovation across departments.
+                    </p>
+                    
+                    <p class="dark:text-[#A1A09A] text-sm mt-4">
+                        This structure allows for the agile implementation of projects, with specialized teams working together under experienced leadership to deliver high-quality solutions tailored to client needs.
+                    </p>
+
+                    <div class="mt-8">
+                        <details class="group bg-[#FDFDFC] dark:bg-[#0a0a0a] border border-gray-100 dark:border-gray-800 rounded-lg overflow-hidden">
+                            <summary class="flex items-center justify-between cursor-pointer p-4 bg-gradient-to-r from-white to-[#FDFDFC] dark:from-[#0a0a0a] dark:to-[#111111]">
+                                <span class="flex items-center">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2 text-[#f53003] dark:text-[#FF4433]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" />
+                                    </svg>
+                                    <span class="font-medium text-[#f53003] dark:text-[#FF4433]">View Full Organizational Chart</span>
+                                </span>
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-[#f53003] dark:text-[#FF4433] transform transition-transform group-open:rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                                </svg>
+                            </summary>
+                            <div class="p-4 border-t border-gray-100 dark:border-gray-800">
+                                <div class="overflow-x-auto">
+                                    <img src="{{ asset('images/chapter2/orgchart.png') }}" alt="Mobbiz Solutions Organizational Chart" class="max-w-full h-auto rounded shadow-md mx-auto">
+                                </div>
+                                <p class="text-sm text-center text-gray-500 dark:text-gray-400 mt-3">
+                                    Figure 2.1: Complete organizational structure of DevOps Outsourcing Inc.
+                                </p>
+                            </div>
+                        </details>
+                        
+                        <p class="dark:text-[#A1A09A] text-sm mt-4">
+                            The organizational structure reflects DevOps Outsourcing Inc's commitment to effective team management and clear lines of communication. The company maintains a balanced hierarchy that provides necessary oversight while encouraging collaboration and innovation across departments.
+                        </p>
+                        
+                        <p class="dark:text-[#A1A09A] text-sm mt-4">
+                            This structure allows for the agile implementation of projects, with specialized teams working together under experienced leadership to deliver high-quality solutions tailored to client needs.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        
         
         <!-- Chapter navigation -->
         <div class="flex justify-between mt-16">

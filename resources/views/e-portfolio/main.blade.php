@@ -125,6 +125,16 @@
                                 </span>
                             </a>
                         </div>
+
+                        <!-- Table of Contents -->
+                        <div class="relative px-4 group">
+                            <a href="#table-of-contents" class="flex flex-col items-center">
+                                <div id="dot-table-of-contents" class="progress-dot active w-4 h-4 rounded-full bg-[#FF4433] group-hover:scale-125 transition-all duration-300 relative z-10 mb-2 shadow-md"></div>
+                                <span class="opacity-0 group-hover:opacity-100 absolute -bottom-8 left-1/2 -translate-x-1/2 whitespace-nowrap bg-white dark:bg-[#2D2D2D] text-gray-800 dark:text-gray-100 text-xs font-medium px-2 py-1 rounded shadow-md transition-all duration-300">
+                                    Table of Contents
+                                </span>
+                            </a>
+                        </div>
                         
                         <!-- Chapter 1 -->
                         <div class="relative px-4 group">
@@ -186,6 +196,10 @@
                         <div class="w-2 h-2 rounded-full bg-[#FF4433] mb-2 transition-all"></div>
                         <span class="text-xs font-medium text-gray-600 dark:text-gray-300 whitespace-nowrap">Intro</span>
                     </a>
+                    <a href="#table-of-contents" class="flex flex-col items-center min-w-[60px] active-section" id="mobile-table-of-contents">
+                        <div class="w-2 h-2 rounded-full bg-[#FF4433] mb-2 transition-all"></div>
+                        <span class="text-xs font-medium text-gray-600 dark:text-gray-300 whitespace-nowrap">Table of Contents</span>
+                    </a>
                     <a href="#chapter-1" class="flex flex-col items-center min-w-[60px]" id="mobile-chapter-1">
                         <div class="w-2 h-2 rounded-full bg-gray-300 dark:bg-gray-600 mb-2 transition-all"></div>
                         <span class="text-xs font-medium text-gray-600 dark:text-gray-300 whitespace-nowrap">Chapter 1</span>
@@ -215,7 +229,7 @@
             </section>
 
             <!-- Table of Contents Section -->
-            <section id="table-of-contents" class="pt-16">
+            <section id="table-of-contents">
                 <div class="container mx-auto px-4 py-16 max-w-5xl">
                     <h2 class="text-3xl font-bold mb-8 dark:text-[#EDEDEC]">Table of Contents</h2>
                     
@@ -367,21 +381,21 @@
             </section>
             
             <!-- Chapter 2 Section -->
-            <section id="chapter-2" class="pt-16 min-h-screen">
+            <section id="chapter-2" class="pt-16">
                   @include('e-portfolio.sections.chapter2')
             </section>
             
             <!-- Chapter 3 Section -->
             <section id="chapter-3" class="pt-16">
-                <div class="w-full py-20 px-6">
-                    <h2 class="text-3xl font-bold mb-8 dark:text-[#EDEDEC]">Chapter 3</h2>
-                    <p class="text-lg dark:text-[#A1A09A]">Content coming soon...</p>
-                </div>
+                @include('e-portfolio.sections.chapter3')
             </section>
             
             <!-- Chapter 4 Section -->
             <section id="chapter-4" class="pt-16">
-                {{-- @include('e-portfolio.sections.chapter4') --}}
+                <div class="w-full py-20 px-6">
+                    <h2 class="text-3xl font-bold mb-8 dark:text-[#EDEDEC]">Chapter 3</h2>
+                    <p class="text-lg dark:text-[#A1A09A]">Content coming soon...</p>
+                </div>
             </section>
             
             <!-- Appendices Section -->
