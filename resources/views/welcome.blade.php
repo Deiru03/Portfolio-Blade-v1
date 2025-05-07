@@ -577,8 +577,8 @@
                                 <img src="{{ asset('images/image-project/bmstailor.png') }}" alt="BMS Tailoring Project" class="w-full h-full object-cover transition-transform duration-700 hover:scale-105">
                             </div>
                             <div class="p-6">
-                                <h3 class="text-xl font-medium mb-2 dark:text-[#EDEDEC]">BMS Tailoring</h3>
-                                <p class="mb-4 dark:text-[#A1A09A]">A streamlined inventory management system designed for tailors. Features include customer measurement tracking, fabric inventory, order management, and appointment scheduling.</p>
+                                <h3 class="text-xl font-medium mb-2 dark:text-[#EDEDEC]">Tailoring Management System</h3>
+                                <p class="mb-4 dark:text-[#A1A09A]">A specialized single-user inventory management system for a tailoring business. Features streamlined stock tracking, order processing, and basic reporting tools designed for small-scale tailoring operations.</p>
                                 <div class="flex flex-wrap gap-2 mb-4">
                                     <span class="px-2 py-1 bg-[#fff2f2] dark:bg-[#1D0002] text-[#f53003] dark:text-[#FF4433] rounded-full text-xs font-medium">Laravel</span>
                                     <span class="px-2 py-1 bg-[#fff2f2] dark:bg-[#1D0002] text-[#f53003] dark:text-[#FF4433] rounded-full text-xs font-medium">MySQL</span>
@@ -600,11 +600,11 @@
                         <!-- Project Card 3 - OMSC Clinic -->
                         <div class="bg-[#FDFDFC] dark:bg-[#0a0a0a] rounded-lg overflow-hidden shadow-[0px_1px_2px_0px_rgba(0,0,0,0.06)] dark:shadow-[inset_0px_0px_0px_1px_#fffaed2d] transition-transform hover:-translate-y-1 hover:shadow-lg">
                             <div class="h-48 bg-[#fff2f2] dark:bg-[#1D0002] overflow-hidden">
-                                <img src="{{ asset('images/image-project/clinic.png') }}" alt="OMSC Clinic Management System" class="w-full h-full object-cover transition-transform duration-700 hover:scale-105">
+                                <img src="{{ asset('images/image-project/clinic.png') }}" alt="Clinic Management System" class="w-full h-full object-cover transition-transform duration-700 hover:scale-105">
                             </div>
                             <div class="p-6">
                                 <h3 class="text-xl font-medium mb-2 dark:text-[#EDEDEC]">OMSC Clinic Management</h3>
-                                <p class="mb-4 dark:text-[#A1A09A]">A comprehensive clinic management system for Occidental Mindoro State College. Features include patient appointment scheduling, medication inventory tracking, medical records management, and reporting tools.</p>
+                                <p class="mb-4 dark:text-[#A1A09A]">A simple appointment scheduling system for the Occidental Mindoro State College clinic. This streamlined solution allows students to book medical consultations online, reducing wait times and improving clinic workflow.</p>
                                 <div class="flex flex-wrap gap-2 mb-4">
                                     <span class="px-2 py-1 bg-[#fff2f2] dark:bg-[#1D0002] text-[#f53003] dark:text-[#FF4433] rounded-full text-xs font-medium">Laravel</span>
                                     <span class="px-2 py-1 bg-[#fff2f2] dark:bg-[#1D0002] text-[#f53003] dark:text-[#FF4433] rounded-full text-xs font-medium">MySQL</span>

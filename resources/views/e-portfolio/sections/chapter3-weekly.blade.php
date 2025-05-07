@@ -660,4 +660,195 @@
             <p class="text-gray-600 dark:text-gray-400">Key Skills Acquired</p>
         </div>
     </div>
+    <!-- Enhanced Statistics Section -->
+    <div class="mt-16 mb-12">
+        <h4 class="text-xl font-medium mb-8 dark:text-[#EDEDEC] text-center">Internship Performance Analytics</h4>
+        
+        <!-- Key Statistics Cards -->
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-4 mb-10">
+            <div class="bg-white dark:bg-[#161615] rounded-xl shadow-sm border border-gray-100 dark:border-gray-800 p-4 text-center">
+                <div class="text-3xl font-bold text-[#f53003] dark:text-[#FF4433] mb-1">23</div>
+                <p class="text-gray-600 dark:text-gray-400 text-sm">Technical Skills Developed</p>
+            </div>
+            <div class="bg-white dark:bg-[#161615] rounded-xl shadow-sm border border-gray-100 dark:border-gray-800 p-4 text-center">
+                <div class="text-3xl font-bold text-[#f53003] dark:text-[#FF4433] mb-1">15</div>
+                <p class="text-gray-600 dark:text-gray-400 text-sm">PDF Templates Created</p>
+            </div>
+            <div class="bg-white dark:bg-[#161615] rounded-xl shadow-sm border border-gray-100 dark:border-gray-800 p-4 text-center">
+                <div class="text-3xl font-bold text-[#f53003] dark:text-[#FF4433] mb-1">7</div>
+                <p class="text-gray-600 dark:text-gray-400 text-sm">Client Meetings Attended</p>
+            </div>
+            <div class="bg-white dark:bg-[#161615] rounded-xl shadow-sm border border-gray-100 dark:border-gray-800 p-4 text-center">
+                <div class="text-3xl font-bold text-[#f53003] dark:text-[#FF4433] mb-1">12</div>
+                <p class="text-gray-600 dark:text-gray-400 text-sm">Critical Bugs Identified</p>
+            </div>
+        </div>
+        
+        <!-- Project Distribution -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+            <!-- Tasks By Type -->
+            <div class="bg-white dark:bg-[#161615] rounded-xl shadow-sm border border-gray-100 dark:border-gray-800 p-6">
+                <h5 class="text-lg font-medium mb-6 dark:text-[#EDEDEC]">Time Distribution by Activity</h5>
+                <div class="space-y-4">
+                    <div>
+                        <div class="flex justify-between text-sm mb-1">
+                            <span class="text-gray-700 dark:text-gray-300">PDF Template Development</span>
+                            <span class="text-gray-700 dark:text-gray-300">32%</span>
+                        </div>
+                        <div class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2.5">
+                            <div class="bg-[#f53003] dark:bg-[#FF4433] h-2.5 rounded-full" style="width: 32%"></div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="flex justify-between text-sm mb-1">
+                            <span class="text-gray-700 dark:text-gray-300">Testing & Quality Assurance</span>
+                            <span class="text-gray-700 dark:text-gray-300">28%</span>
+                        </div>
+                        <div class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2.5">
+                            <div class="bg-[#f53003] dark:bg-[#FF4433] h-2.5 rounded-full" style="width: 28%"></div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="flex justify-between text-sm mb-1">
+                            <span class="text-gray-700 dark:text-gray-300">Real World Client Task</span>
+                            <span class="text-gray-700 dark:text-gray-300">18%</span>
+                        </div>
+                        <div class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2.5">
+                            <div class="bg-[#f53003] dark:bg-[#FF4433] h-2.5 rounded-full" style="width: 18%"></div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="flex justify-between text-sm mb-1">
+                            <span class="text-gray-700 dark:text-gray-300">Documentation</span>
+                            <span class="text-gray-700 dark:text-gray-300">15%</span>
+                        </div>
+                        <div class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2.5">
+                            <div class="bg-[#f53003] dark:bg-[#FF4433] h-2.5 rounded-full" style="width: 15%"></div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="flex justify-between text-sm mb-1">
+                            <span class="text-gray-700 dark:text-gray-300">Meetings & Training</span>
+                            <span class="text-gray-700 dark:text-gray-300">7%</span>
+                        </div>
+                        <div class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2.5">
+                            <div class="bg-[#f53003] dark:bg-[#FF4433] h-2.5 rounded-full" style="width: 7%"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Achievement Matrix -->
+            <div class="bg-white dark:bg-[#161615] rounded-xl shadow-sm border border-gray-100 dark:border-gray-800 p-6">
+                <h5 class="text-lg font-medium mb-6 dark:text-[#EDEDEC]">Achievement Matrix</h5>
+                
+                <div class="space-y-3">
+                    <div class="flex items-center">
+                        <div class="w-32 text-sm text-gray-700 dark:text-gray-300">Problem Solving</div>
+                        <div class="flex-1 flex">
+                            <div class="h-2 w-2 bg-[#f53003] dark:bg-[#FF4433] rounded-full mx-0.5"></div>
+                            <div class="h-2 w-2 bg-[#f53003] dark:bg-[#FF4433] rounded-full mx-0.5"></div>
+                            <div class="h-2 w-2 bg-[#f53003] dark:bg-[#FF4433] rounded-full mx-0.5"></div>
+                            <div class="h-2 w-2 bg-[#f53003] dark:bg-[#FF4433] rounded-full mx-0.5"></div>
+                            <div class="h-2 w-2 bg-[#f53003] dark:bg-[#FF4433] rounded-full mx-0.5"></div>
+                            <div class="h-2 w-2 bg-[#f53003]/50 dark:bg-[#FF4433]/50 rounded-full mx-0.5"></div>
+                            <div class="h-2 w-2 bg-[#f53003]/20 dark:bg-[#FF4433]/20 rounded-full mx-0.5"></div>
+                        </div>
+                        <div class="w-8 text-right text-sm font-medium text-gray-700 dark:text-gray-300">5/7</div>
+                    </div>
+                    
+                    <div class="flex items-center">
+                        <div class="w-32 text-sm text-gray-700 dark:text-gray-300">Technical Skills</div>
+                        <div class="flex-1 flex">
+                            <div class="h-2 w-2 bg-[#f53003] dark:bg-[#FF4433] rounded-full mx-0.5"></div>
+                            <div class="h-2 w-2 bg-[#f53003] dark:bg-[#FF4433] rounded-full mx-0.5"></div>
+                            <div class="h-2 w-2 bg-[#f53003] dark:bg-[#FF4433] rounded-full mx-0.5"></div>
+                            <div class="h-2 w-2 bg-[#f53003] dark:bg-[#FF4433] rounded-full mx-0.5"></div>
+                            <div class="h-2 w-2 bg-[#f53003] dark:bg-[#FF4433] rounded-full mx-0.5"></div>
+                            <div class="h-2 w-2 bg-[#f53003] dark:bg-[#FF4433] rounded-full mx-0.5"></div>
+                            <div class="h-2 w-2 bg-[#f53003]/50 dark:bg-[#FF4433]/50 rounded-full mx-0.5"></div>
+                        </div>
+                        <div class="w-8 text-right text-sm font-medium text-gray-700 dark:text-gray-300">6/7</div>
+                    </div>
+                    
+                    <div class="flex items-center">
+                        <div class="w-32 text-sm text-gray-700 dark:text-gray-300">Time Management</div>
+                        <div class="flex-1 flex">
+                            <div class="h-2 w-2 bg-[#f53003] dark:bg-[#FF4433] rounded-full mx-0.5"></div>
+                            <div class="h-2 w-2 bg-[#f53003] dark:bg-[#FF4433] rounded-full mx-0.5"></div>
+                            <div class="h-2 w-2 bg-[#f53003] dark:bg-[#FF4433] rounded-full mx-0.5"></div>
+                            <div class="h-2 w-2 bg-[#f53003] dark:bg-[#FF4433] rounded-full mx-0.5"></div>
+                            <div class="h-2 w-2 bg-[#f53003] dark:bg-[#FF4433] rounded-full mx-0.5"></div>
+                            <div class="h-2 w-2 bg-[#f53003]/50 dark:bg-[#FF4433]/50 rounded-full mx-0.5"></div>
+                            <div class="h-2 w-2 bg-[#f53003]/20 dark:bg-[#FF4433]/20 rounded-full mx-0.5"></div>
+                        </div>
+                        <div class="w-8 text-right text-sm font-medium text-gray-700 dark:text-gray-300">5/7</div>
+                    </div>
+                    
+                    <div class="flex items-center">
+                        <div class="w-32 text-sm text-gray-700 dark:text-gray-300">Documentation</div>
+                        <div class="flex-1 flex">
+                            <div class="h-2 w-2 bg-[#f53003] dark:bg-[#FF4433] rounded-full mx-0.5"></div>
+                            <div class="h-2 w-2 bg-[#f53003] dark:bg-[#FF4433] rounded-full mx-0.5"></div>
+                            <div class="h-2 w-2 bg-[#f53003] dark:bg-[#FF4433] rounded-full mx-0.5"></div>
+                            <div class="h-2 w-2 bg-[#f53003] dark:bg-[#FF4433] rounded-full mx-0.5"></div>
+                            <div class="h-2 w-2 bg-[#f53003] dark:bg-[#FF4433] rounded-full mx-0.5"></div>
+                            <div class="h-2 w-2 bg-[#f53003] dark:bg-[#FF4433] rounded-full mx-0.5"></div>
+                            <div class="h-2 w-2 bg-[#f53003] dark:bg-[#FF4433] rounded-full mx-0.5"></div>
+                        </div>
+                        <div class="w-8 text-right text-sm font-medium text-gray-700 dark:text-gray-300">7/7</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Growth Timeline -->
+        <div class="bg-white dark:bg-[#161615] rounded-xl shadow-sm border border-gray-100 dark:border-gray-800 p-6">
+            <h5 class="text-lg font-medium mb-6 dark:text-[#EDEDEC]">Milestone Achievement Timeline</h5>
+            
+            <div class="relative">
+                <!-- Timeline Line -->
+                <div class="absolute top-5 h-0.5 w-full bg-gray-200 dark:bg-gray-800"></div>
+                
+                <!-- Timeline Points -->
+                <div class="relative flex justify-between">
+                    <div class="text-center">
+                        <div class="w-4 h-4 rounded-full bg-[#f53003] dark:bg-[#FF4433] mx-auto mb-2 relative z-10"></div>
+                        <div class="text-xs text-gray-600 dark:text-gray-400">Week 1</div>
+                        <div class="text-xs text-gray-600 dark:text-gray-400 font-medium mt-1">Onboarding</div>
+                    </div>
+                    
+                    <div class="text-center">
+                        <div class="w-4 h-4 rounded-full bg-[#f53003] dark:bg-[#FF4433] mx-auto mb-2 relative z-10"></div>
+                        <div class="text-xs text-gray-600 dark:text-gray-400">Week 3</div>
+                        <div class="text-xs text-gray-600 dark:text-gray-400 font-medium mt-1">First Bug Fix</div>
+                    </div>
+                    
+                    <div class="text-center">
+                        <div class="w-4 h-4 rounded-full bg-[#f53003] dark:bg-[#FF4433] mx-auto mb-2 relative z-10"></div>
+                        <div class="text-xs text-gray-600 dark:text-gray-400">Week 6</div>
+                        <div class="text-xs text-gray-600 dark:text-gray-400 font-medium mt-1">PDF Mastery</div>
+                    </div>
+                    
+                    <div class="text-center">
+                        <div class="w-4 h-4 rounded-full bg-[#f53003] dark:bg-[#FF4433] mx-auto mb-2 relative z-10"></div>
+                        <div class="text-xs text-gray-600 dark:text-gray-400">Week 9</div>
+                        <div class="text-xs text-gray-600 dark:text-gray-400 font-medium mt-1">First Real Task</div>
+                    </div>
+                    
+                    <div class="text-center">
+                        <div class="w-4 h-4 rounded-full bg-[#f53003] dark:bg-[#FF4433] mx-auto mb-2 relative z-10"></div>
+                        <div class="text-xs text-gray-600 dark:text-gray-400">Week 11</div>
+                        <div class="text-xs text-gray-600 dark:text-gray-400 font-medium mt-1">Team Award</div>
+                    </div>
+                    
+                    <div class="text-center">
+                        <div class="w-4 h-4 rounded-full bg-[#f53003] dark:bg-[#FF4433] mx-auto mb-2 relative z-10"></div>
+                        <div class="text-xs text-gray-600 dark:text-gray-400">Week 14</div>
+                        <div class="text-xs text-gray-600 dark:text-gray-400 font-medium mt-1">Completion</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
