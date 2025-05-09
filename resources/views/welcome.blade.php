@@ -561,7 +561,7 @@
                                     <span class="px-2 py-1 bg-[#fff2f2] dark:bg-[#1D0002] text-[#f53003] dark:text-[#FF4433] rounded-full text-xs font-medium">Clearance</span>
                                 </div>
                                 <div class="flex gap-4">
-                                    <a href="https://omsc.edu.ph" class="text-[#f53003] dark:text-[#FF4433] hover:underline flex items-center">
+                                    <a href="https://iqa.omsccast.com" class="text-[#f53003] dark:text-[#FF4433] hover:underline flex items-center">
                                         <span>View Website</span>
                                         <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
