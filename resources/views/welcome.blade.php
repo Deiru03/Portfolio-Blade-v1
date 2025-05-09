@@ -552,13 +552,13 @@
                                 <img src="{{ asset('images/image-project/iqaclearvault.png') }}" alt="Occidental Mindoro State College Project" class="w-full h-full object-cover transition-transform duration-700 hover:scale-105">
                             </div>
                             <div class="p-6">
-                                <h3 class="text-xl font-medium mb-2 dark:text-[#EDEDEC]">OMSC Portal</h3>
+                                <h3 class="text-xl font-medium mb-2 dark:text-[#EDEDEC]">OMSC - IQA ClearVault</h3>
                                 <p class="mb-4 dark:text-[#A1A09A]">A centralized academic information system for Occidental Mindoro State College. A comprehensive faculty clearance checklist and accreditation management system. This large-scale solution streamlines document verification, tracks compliance, and manages institutional accreditation requirements..</p>
                                 <div class="flex flex-wrap gap-2 mb-4">
                                     <span class="px-2 py-1 bg-[#fff2f2] dark:bg-[#1D0002] text-[#f53003] dark:text-[#FF4433] rounded-full text-xs font-medium">Laravel</span>
                                     <span class="px-2 py-1 bg-[#fff2f2] dark:bg-[#1D0002] text-[#f53003] dark:text-[#FF4433] rounded-full text-xs font-medium">MySQL</span>
-                                    <span class="px-2 py-1 bg-[#fff2f2] dark:bg-[#1D0002] text-[#f53003] dark:text-[#FF4433] rounded-full text-xs font-medium">Educational CMS</span>
-                                    <span class="px-2 py-1 bg-[#fff2f2] dark:bg-[#1D0002] text-[#f53003] dark:text-[#FF4433] rounded-full text-xs font-medium">Tailwind</span>
+                                    <span class="px-2 py-1 bg-[#fff2f2] dark:bg-[#1D0002] text-[#f53003] dark:text-[#FF4433] rounded-full text-xs font-medium">Accreditation</span>
+                                    <span class="px-2 py-1 bg-[#fff2f2] dark:bg-[#1D0002] text-[#f53003] dark:text-[#FF4433] rounded-full text-xs font-medium">Clearance</span>
                                 </div>
                                 <div class="flex gap-4">
                                     <a href="https://omsc.edu.ph" class="text-[#f53003] dark:text-[#FF4433] hover:underline flex items-center">
