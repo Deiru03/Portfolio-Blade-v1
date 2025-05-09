@@ -375,6 +375,10 @@
                 </div>
             </section>
             
+ {{---------------- SECTIONS - Location "resources/views/e-portfolio/sections/chapter#.blade.php" -----------------}}
+
+
+
             <!-- Chapter 1 Section -->
             <section id="chapter-1" class="pt-16">
                 @include('e-portfolio.sections.chapter1')
@@ -393,13 +397,18 @@
             <!-- Chapter 4 Section -->
             <section id="chapter-4" class="pt-16">
                 <div class="w-full py-20 px-6">
-                    <h2 class="text-3xl font-bold mb-8 dark:text-[#EDEDEC]">Chapter 3</h2>
+                    <h2 class="text-3xl font-bold mb-8 dark:text-[#EDEDEC]">Chapter 4</h2>
                     <p class="text-lg dark:text-[#A1A09A]">Content coming soon...</p>
                 </div>
+                @include('e-portfolio.sections.chapter4')
             </section>
             
             <!-- Appendices Section -->
             <section id="appendices" class="pt-16">
+                <div class="w-full py-20 px-6">
+                    <h2 class="text-3xl font-bold mb-8 dark:text-[#EDEDEC]">Appendices</h2>
+                    <p class="text-lg dark:text-[#A1A09A]">Content coming soon...</p>
+                </div>
                 {{-- @include('e-portfolio.sections.appendices') --}}
             </section>
         </main>

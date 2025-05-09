@@ -603,8 +603,8 @@
                                 <img src="{{ asset('images/image-project/clinic.png') }}" alt="Clinic Management System" class="w-full h-full object-cover transition-transform duration-700 hover:scale-105">
                             </div>
                             <div class="p-6">
-                                <h3 class="text-xl font-medium mb-2 dark:text-[#EDEDEC]">OMSC Clinic Management</h3>
-                                <p class="mb-4 dark:text-[#A1A09A]">A simple appointment scheduling system for the Occidental Mindoro State College clinic. This streamlined solution allows students to book medical consultations online, reducing wait times and improving clinic workflow.</p>
+                                <h3 class="text-xl font-medium mb-2 dark:text-[#EDEDEC]">Clinic Appointment Management</h3>
+                                <p class="mb-4 dark:text-[#A1A09A]">An existing appointment scheduling system for the Occidental Mindoro State College clinic that I enhanced by adding new features and resolving critical errors. I improved the system to streamline student booking for medical consultations, reducing wait times and optimizing clinic workflow.</p>
                                 <div class="flex flex-wrap gap-2 mb-4">
                                     <span class="px-2 py-1 bg-[#fff2f2] dark:bg-[#1D0002] text-[#f53003] dark:text-[#FF4433] rounded-full text-xs font-medium">Laravel</span>
                                     <span class="px-2 py-1 bg-[#fff2f2] dark:bg-[#1D0002] text-[#f53003] dark:text-[#FF4433] rounded-full text-xs font-medium">MySQL</span>
