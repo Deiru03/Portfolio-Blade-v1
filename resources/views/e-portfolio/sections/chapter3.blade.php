@@ -75,21 +75,182 @@
                 I. Weekly Accomplishment Report
                 <span class="absolute bottom-0 left-0 w-1/4 h-[3px] bg-[#f53003] dark:bg-[#FF4433] animate-pulse"></span>
             </h3>
+            <div class="mb-6">
+                <button class="flex w-full justify-between items-center bg-[#FDFDFC] dark:bg-[#0a0a0a] p-4 rounded-lg border border-gray-100 dark:border-gray-800 focus:outline-none" onclick="toggleWeeklyReport()">
+                    <div class="flex items-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2 text-[#f53003] dark:text-[#FF4433]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                        </svg>
+                        <span class="font-medium dark:text-[#EDEDEC]">View Weekly Accomplishment Reports</span>
+                    </div>
+                    <svg id="weekly-report-icon" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-[#f53003] dark:text-[#FF4433] transform transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                    </svg>
+                </button>
+                
+                <div id="weekly-report-content" class="overflow-hidden max-h-0 transition-all duration-300 ease-in-out">
+                    <div class="pt-4 pb-2 px-4 bg-white dark:bg-[#161615] border border-t-0 border-gray-100 dark:border-gray-800 rounded-b-lg">
+                        <div class="max-h-[650px] overflow-y-auto pr-2 custom-scrollbar">
+                            <section id="chapter-3-weekly" class="pt-4">
+                                @include('e-portfolio.sections.chapter3-weekly')
+                            </section>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
-            <section id="chapter-3-weekly" class="pt-16">
-                @include('e-portfolio.sections.chapter3-weekly')
-            </section>
+            <script>
+                function toggleWeeklyReport() {
+                    const content = document.getElementById('weekly-report-content');
+                    const icon = document.getElementById('weekly-report-icon');
+                    
+                    if (content.classList.contains('max-h-0')) {
+                        content.classList.remove('max-h-0');
+                        content.classList.add('max-h-[650px]'); // Increased height to account for scroll container
+                        icon.classList.add('rotate-180');
+                    } else {
+                        content.classList.remove('max-h-[650px]');
+                        content.classList.add('max-h-0');
+                        icon.classList.remove('rotate-180');
+                    }
+                }
+            </script>
+
+            <style>
+                /* Custom scrollbar styling */
+                .custom-scrollbar::-webkit-scrollbar {
+                    width: 6px;
+                }
+                
+                .custom-scrollbar::-webkit-scrollbar-track {
+                    background-color: rgba(0, 0, 0, 0.05);
+                    border-radius: 10px;
+                }
+                
+                .custom-scrollbar::-webkit-scrollbar-thumb {
+                    background-color: rgba(245, 48, 3, 0.3);
+                    border-radius: 10px;
+                }
+                
+                .dark .custom-scrollbar::-webkit-scrollbar-thumb {
+                    background-color: rgba(255, 68, 51, 0.3);
+                }
+                
+                .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+                    background-color: rgba(245, 48, 3, 0.5);
+                }
+                
+                .dark .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+                    background-color: rgba(255, 68, 51, 0.5);
+                }
+            </style>
         </div>
 
         <!-- Section 2: Daily Time Record -->
         <div class="bg-white dark:bg-[#161615] p-6 rounded-xl shadow-md mb-12">
             <h3 class="text-2xl font-medium mb-6 dark:text-[#EDEDEC] relative overflow-hidden">
-                II. Daily Time Record
-                <span class="absolute bottom-0 left-0 w-1/4 h-[3px] bg-[#f53003] dark:bg-[#FF4433] animate-pulse"></span>
+            II. Daily Time Record
+            <span class="absolute bottom-0 left-0 w-1/4 h-[3px] bg-[#f53003] dark:bg-[#FF4433] animate-pulse"></span>
             </h3>
-            <section id="chapter-3-daily" class="pt-16">
-                @include('e-portfolio.sections.chapter3-daily')
-            </section>
+            <div class="mb-6">
+            <button class="flex w-full justify-between items-center bg-[#FDFDFC] dark:bg-[#0a0a0a] p-4 rounded-lg border border-gray-100 dark:border-gray-800 focus:outline-none" onclick="toggleDailyRecord()">
+                <div class="flex items-center">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2 text-[#f53003] dark:text-[#FF4433]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <span class="font-medium dark:text-[#EDEDEC]">View Daily Time Records</span>
+                </div>
+                <svg id="daily-record-icon" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-[#f53003] dark:text-[#FF4433] transform transition-transform duration-300 rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                </svg>
+            </button>
+            
+            <div id="daily-record-content" class="overflow-hidden max-h-[650px] transition-all duration-300 ease-in-out">
+                <div class="pt-4 pb-2 px-4 bg-white dark:bg-[#161615] border border-t-0 border-gray-100 dark:border-gray-800 rounded-b-lg">
+                <div class="max-h-[650px] overflow-y-auto pr-2 custom-scrollbar">
+                    <section id="chapter-3-daily">
+                    @include('e-portfolio.sections.chapter3-daily')
+                    </section>
+                </div>
+                </div>
+            </div>
+            </div>
+
+            <script>
+            function toggleDailyRecord() {
+                const content = document.getElementById('daily-record-content');
+                const icon = document.getElementById('daily-record-icon');
+                
+                if (content.classList.contains('max-h-0')) {
+                content.classList.remove('max-h-0');
+                content.classList.add('max-h-[650px]');
+                icon.classList.add('rotate-180');
+                } else {
+                content.classList.remove('max-h-[650px]');
+                content.classList.add('max-h-0');
+                icon.classList.remove('rotate-180');
+                }
+            }
+            </script>
+            <div class="mt-6">
+                <h4 class="text-lg font-medium mb-4 dark:text-[#EDEDEC]">Daily Time Record from ODOO</h4>
+                <button class="flex w-full justify-between items-center bg-[#FDFDFC] dark:bg-[#0a0a0a] p-4 rounded-lg border border-gray-100 dark:border-gray-800 focus:outline-none" onclick="toggleTimesheet()">
+                    <div class="flex items-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2 text-[#f53003] dark:text-[#FF4433]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                        <span class="font-medium dark:text-[#EDEDEC]">View Timesheet PDF from ODOO</span>
+                    </div>
+                    <svg id="timesheet-icon" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-[#f53003] dark:text-[#FF4433] transform transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                    </svg>
+                </button>
+                
+                <div id="timesheet-content" class="overflow-hidden max-h-0 transition-all duration-300 ease-in-out">
+                    <div class="pt-4 pb-2 px-4 bg-white dark:bg-[#161615] border border-t-0 border-gray-100 dark:border-gray-800 rounded-b-lg">
+                        <div class="bg-white dark:bg-[#0d0d0d] rounded-lg overflow-hidden shadow-sm border border-gray-200 dark:border-gray-800">
+                            <div class="pdf-container" style="height: 600px;">
+                                <object
+                                    data="{{ asset('images/chapter3/Timesheet Entries (3).pdf') }}"
+                                    type="application/pdf"
+                                    width="100%"
+                                    height="100%"
+                                    class="rounded-lg"
+                                >
+                                    <div class="flex flex-col items-center justify-center h-full p-6 text-center">
+                                        <p class="mb-4 dark:text-[#A1A09A]">Your browser doesn't support embedded PDFs.</p>
+                                        <a 
+                                            href="{{ asset('images/chapter3/Timesheet Entries (3).pdf') }}" 
+                                            target="_blank"
+                                            class="px-4 py-2 bg-[#f53003] dark:bg-[#FF4433] text-white rounded-md hover:bg-opacity-90 transition-all"
+                                        >
+                                            Download Timesheet PDF
+                                        </a>
+                                    </div>
+                                </object>
+                            </div>
+                        </div>
+                        <p class="text-sm text-center text-gray-500 dark:text-gray-400 mt-2 italic">Official Daily Time Record (DTR) - Timesheet entries for the internship period</p>
+                    </div>
+                </div>
+            </div>
+
+            <script>
+                function toggleTimesheet() {
+                    const content = document.getElementById('timesheet-content');
+                    const icon = document.getElementById('timesheet-icon');
+                    
+                    if (content.classList.contains('max-h-0')) {
+                        content.classList.remove('max-h-0');
+                        content.classList.add('max-h-[650px]');
+                        icon.classList.add('rotate-180');
+                    } else {
+                        content.classList.remove('max-h-[650px]');
+                        content.classList.add('max-h-0');
+                        icon.classList.remove('rotate-180');
+                    }
+                }
+            </script>
         </div>
         
         <!-- Section 3: Internship Progress Report -->

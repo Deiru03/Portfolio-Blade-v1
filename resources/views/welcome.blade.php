@@ -57,9 +57,9 @@
                         </span>
                     </h1>
                     <p class="text-xl mb-6 dark:text-[#A1A09A] animate-fadeIn animation-delay-300 flex items-center">
-                        <span class="relative overflow-hidden inline-block pr-3">Web Developer</span> 
+                        <span class="relative overflow-hidden inline-block pr-3">Laravel Developer</span> 
                         <span class="inline-block w-2 h-2 rounded-full bg-[#f53003] dark:bg-[#FF4433] mx-2"></span> 
-                        <span class="relative overflow-hidden inline-block pl-1">Designer</span>
+                        <span class="relative overflow-hidden inline-block pl-1">Full Stack Developer</span>
                     </p>
                     <p class="mb-8 dark:text-[#EDEDEC] animate-fadeIn animation-delay-600 max-w-xl leading-relaxed">I create engaging web experiences with clean, efficient code. Passionate about building applications that make a difference.</p>
                     <div class="flex flex-col sm:flex-row gap-3 sm:gap-4 animate-fadeIn animation-delay-900 w-full sm:w-auto">
