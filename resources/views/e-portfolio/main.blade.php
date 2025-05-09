@@ -396,10 +396,6 @@
             
             <!-- Chapter 4 Section -->
             <section id="chapter-4" class="pt-16">
-                <div class="w-full py-20 px-6">
-                    <h2 class="text-3xl font-bold mb-8 dark:text-[#EDEDEC]">Chapter 4</h2>
-                    <p class="text-lg dark:text-[#A1A09A]">Content coming soon...</p>
-                </div>
                 @include('e-portfolio.sections.chapter4')
             </section>
             
@@ -418,31 +414,34 @@
         
         <script>
             document.addEventListener('DOMContentLoaded', function() {
-                // Smooth scrolling for internal links (keep this part unchanged)
+                // Smooth scrolling for internal links
                 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
                     anchor.addEventListener('click', function(e) {
                         e.preventDefault();
                         
                         const targetId = this.getAttribute('href');
-                        if(targetId === '#') return; // Skip if just '#'
+                        if(targetId === '#') return;
                         
                         const targetElement = document.querySelector(targetId);
-                        if(!targetElement) return; // Skip if element doesn't exist
+                        if(!targetElement) return;
                         
                         window.scrollTo({
-                            top: targetElement.offsetTop - 80, // Offset for header height
+                            top: targetElement.offsetTop - 80,
                             behavior: 'smooth'
                         });
                         
-                        // Update progress dots when clicking on navigation
-                        updateActiveDot(targetId.substring(1));
+                        // Update dots when clicking navigation
+                        setTimeout(() => {
+                            updateActiveDot(targetId.substring(1));
+                        }, 100);
                     });
                 });
+                // Add this at the top level (right after DOMContentLoaded)
+                let currentSectionId = null; // Track current section for stability
+                const sectionChangeThreshold = 0.35; // Require significant visibility to change sections
                 
-                // Modified function to update active dot (both mobile and desktop)
                 function updateActiveDot(sectionId) {
-                    console.log("Activating section:", sectionId); // Debug
-                    
+                    // Your existing updateActiveDot code - no changes needed
                     // Reset all desktop dots
                     document.querySelectorAll('.progress-dot').forEach(dot => {
                         dot.classList.remove('active', 'bg-[#FF4433]');
@@ -459,14 +458,14 @@
                         }
                     });
                     
-                    // Activate the specific desktop dot - handle both IDs to ensure it works for intro
+                    // Activate the specific desktop dot
                     const desktopDot = document.getElementById(`dot-${sectionId}`);
                     if (desktopDot) {
                         desktopDot.classList.add('active', 'bg-[#FF4433]');
                         desktopDot.classList.remove('bg-gray-400', 'dark:bg-gray-500');
                     }
                     
-                    // Activate mobile nav item - handle both IDs to ensure it works for intro
+                    // Activate mobile nav item
                     const mobileItemId = `mobile-${sectionId}`;
                     const mobileItem = document.getElementById(mobileItemId);
                     if (mobileItem) {
@@ -480,90 +479,155 @@
                         // Ensure the active item is visible in the scroll area
                         mobileItem.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
                     }
+                    
+                    // Update current section ID for continuity
+                    currentSectionId = sectionId;
                 }
                 
-                // Add content to empty sections to make them detectable
-                document.querySelectorAll('section[id]:empty').forEach(section => {
-                    // Check if the section is actually empty (could have commented out code)
-                    if (section.children.length === 0 || 
-                        (section.children.length === 1 && section.firstElementChild.nodeName === 'COMMENT')) {
-                        const placeholder = document.createElement('div');
-                        placeholder.className = 'w-full py-20 px-6 min-h-screen';
-                        placeholder.innerHTML = `<h2 class="text-3xl font-bold mb-8 dark:text-[#EDEDEC]">${section.id.charAt(0).toUpperCase() + section.id.slice(1)}</h2>
-                                                <p class="text-lg dark:text-[#A1A09A]">Content coming soon...</p>`;
-                        section.appendChild(placeholder);
-                    }
-                });
-                
-                // Improved Intersection Observer for scroll-based section detection
-                const sections = document.querySelectorAll('section[id]');
-                console.log("Found sections:", sections.length); // Debug
-                
-                const observerOptions = {
-                    root: null,
-                    rootMargin: '-5% 0px -5% 0px', // More sensitive detection for intro section
-                    threshold: [0.05, 0.1, 0.5]  // Multiple thresholds with a very low first value
-                };
-                
-                const observer = new IntersectionObserver((entries) => {
-                    // Find the section with the largest intersection ratio
-                    let maxSection = null;
-                    let maxRatio = 0;
+                // Improved function to determine which section is most visible
+                function getMostVisibleSection() {
+                    const sections = document.querySelectorAll('section[id]');
+                    let maxVisibleSection = null;
+                    let maxVisibilityScore = 0;
                     
-                    entries.forEach(entry => {
-                        // Debug info to see what's happening
-                        console.log(`Section ${entry.target.id}: intersecting=${entry.isIntersecting}, ratio=${entry.intersectionRatio}`);
+                    // Top and bottom boundaries check (entry/exit points)
+                    const topThreshold = 150; // Pixels from top to trigger activation
+                    const bottomThreshold = 100; // Pixels from bottom to trigger activation
+                    
+                    for (const section of sections) {
+                        const rect = section.getBoundingClientRect();
+                        const viewportHeight = window.innerHeight;
                         
-                        if (entry.isIntersecting && entry.intersectionRatio > maxRatio) {
-                            maxRatio = entry.intersectionRatio;
-                            maxSection = entry.target;
+                        // Check if section is entering the viewport from the top
+                        if (rect.top >= -topThreshold && rect.top <= topThreshold * 2) {
+                            return section.id; // Immediately activate when entering
                         }
-                    });
-                    
-                    // Update the active dot if we found an intersecting section
-                    if (maxSection) {
-                        updateActiveDot(maxSection.getAttribute('id'));
+                        
+                        // Check if we're at the bottom of a section and about to exit
+                        if (rect.bottom >= viewportHeight - bottomThreshold && 
+                            rect.bottom <= viewportHeight + bottomThreshold) {
+                            // Look ahead to the next section if it exists
+                            const nextSection = section.nextElementSibling;
+                            if (nextSection && nextSection.id) {
+                                const nextRect = nextSection.getBoundingClientRect();
+                                if (nextRect.top < viewportHeight) {
+                                    return nextSection.id; // Activate next section slightly early
+                                }
+                            }
+                        }
+                        
+                        // Calculate visible area
+                        const visibleTop = Math.max(0, rect.top);
+                        const visibleBottom = Math.min(viewportHeight, rect.bottom);
+                        const visibleHeight = Math.max(0, visibleBottom - visibleTop);
+                        
+                        // Nothing visible? Skip calculation
+                        if (visibleHeight <= 0) continue;
+                        
+                        // Calculate what percentage of the viewport this section occupies
+                        const viewportPercentage = visibleHeight / viewportHeight;
+                        
+                        // Calculate what percentage of the section is visible
+                        const sectionPercentage = visibleHeight / rect.height;
+                        
+                        // Calculate distance from center of viewport
+                        const viewportCenter = viewportHeight / 2;
+                        const sectionCenter = (visibleTop + visibleBottom) / 2;
+                        const distanceFromCenter = Math.abs(viewportCenter - sectionCenter) / viewportHeight;
+                        
+                        // Give a continuity bonus if this is the current section
+                        const continuityBonus = (section.id === currentSectionId) ? 0.2 : 0;
+                        
+                        // Combine factors with weighted scoring for better stability
+                        const visibilityScore = (viewportPercentage * 0.4) + 
+                                            (sectionPercentage * 0.3) + 
+                                            ((1 - distanceFromCenter) * 0.2) +
+                                            continuityBonus;
+                        
+                        if (visibilityScore > maxVisibilityScore) {
+                            maxVisibilityScore = visibilityScore;
+                            maxVisibleSection = section;
+                        }
                     }
-                }, observerOptions);
+                    
+                    // Only change section if we have significant visibility or no current section
+                    if (maxVisibilityScore > sectionChangeThreshold || !currentSectionId) {
+                        return maxVisibleSection ? maxVisibleSection.id : null;
+                    } else {
+                        // Otherwise maintain current section for stability
+                        return currentSectionId;
+                    }
+                }
                 
-                // Start observing all sections
-                sections.forEach(section => {
-                    observer.observe(section);
-                    console.log("Observing section:", section.id); // Debug
-                });
+                // Optimized scroll handler with shorter throttling
+                let scrollTimeout = null;
+                // Replace the handleScroll function with this improved version:
+                function handleScroll() {
+                    if (scrollTimeout) return;
+                    
+                    scrollTimeout = setTimeout(() => {
+                        // Special case for top of page
+                        if (window.scrollY < 50) {
+                            updateActiveDot('intro');
+                            scrollTimeout = null;
+                            return;
+                        }
+                        
+                        // Get the most visible section using our existing calculation
+                        const mostVisibleSectionId = getMostVisibleSection();
+                        
+                        // Special handling for Chapter 3
+                        if (currentSectionId === 'chapter-3') {
+                            // When we're already in Chapter 3, make it harder to exit
+                            const chapter3 = document.getElementById('chapter-3');
+                            const chapter3Rect = chapter3.getBoundingClientRect();
+                            const chapter4 = document.getElementById('chapter-4');
+                            const chapter4Rect = chapter4.getBoundingClientRect();
+                            
+                            // Only leave Chapter 3 if it's mostly off-screen OR Chapter 4 is clearly visible
+                            if (chapter3Rect.bottom > 0 && 
+                                chapter3Rect.top < window.innerHeight * 0.8 && 
+                                (chapter4Rect.top > window.innerHeight || chapter4Rect.top < window.innerHeight * 0.8)) {
+                                // Maintain Chapter 3 as active
+                                updateActiveDot('chapter-3');
+                                scrollTimeout = null;
+                                return;
+                            }
+                        }
+                        
+                        // Special handling for Chapter 4
+                        if (currentSectionId === 'chapter-4') {
+                            // When we're already in Chapter 4, make it harder to exit
+                            const chapter4 = document.getElementById('chapter-4');
+                            const chapter4Rect = chapter4.getBoundingClientRect();
+                            const appendices = document.getElementById('appendices');
+                            const appendicesRect = appendices.getBoundingClientRect();
+                            
+                            // Only leave Chapter 4 if it's mostly off-screen OR Appendices is clearly visible
+                            if (chapter4Rect.bottom > 0 && 
+                                chapter4Rect.top < window.innerHeight * 0.8 && 
+                                (appendicesRect.top > window.innerHeight || appendicesRect.top < window.innerHeight * 0.8)) {
+                                // Maintain Chapter 4 as active
+                                updateActiveDot('chapter-4');
+                                scrollTimeout = null;
+                                return;
+                            }
+                        }
+                        
+                        // Default behavior for all other sections
+                        if (mostVisibleSectionId) {
+                            updateActiveDot(mostVisibleSectionId);
+                        }
+                        
+                        scrollTimeout = null;
+                    }, 20); // Keep at 20ms for responsive updates
+                }
                 
-                // Additional handler for top of page to ensure intro is activated
-                window.addEventListener('scroll', function() {
-                    if (window.scrollY < 100) { // If we're at the very top of the page
-                        updateActiveDot('intro');
-                    }
-                });
+                // Keep your existing event listeners and initial state setup
+                window.addEventListener('scroll', handleScroll);
+                handleScroll();
                 
-                // Add no-scrollbar utility via CSS (unchanged)
-                const style = document.createElement('style');
-                style.textContent = `
-                    /* Hide scrollbar for Chrome, Safari and Opera */
-                    .no-scrollbar::-webkit-scrollbar {
-                        display: none;
-                    }
-                    
-                    /* Hide scrollbar for IE, Edge and Firefox */
-                    .no-scrollbar {
-                        -ms-overflow-style: none;  /* IE and Edge */
-                        scrollbar-width: none;  /* Firefox */
-                    }
-                    
-                    /* Active section styling for mobile */
-                    .active-section span {
-                        color: #FF4433;
-                    }
-                    
-                    /* Make sure sections have minimal height */
-                    section[id] {
-                        min-height: 50vh;
-                    }
-                `;
-                document.head.appendChild(style);
+                // Keep your existing CSS styles
             });
         </script>
     </body>
